@@ -1,0 +1,18 @@
+### VisualStudioCode ###
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# dotenv environment variables file
+.env
+.env.test
+.env.production
+
+# Optional npm cache directory
+.npm
+
+#node_modules
+node_modules

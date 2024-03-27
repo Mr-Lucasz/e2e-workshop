@@ -1,0 +1,14 @@
+{  
+    "stepDefinitions": [  
+        "[filepath]/**/*{js,ts}",  
+        "[filepath]{js,ts}",  
+        "cypress/support/step_definitions/*{js,ts}"  
+    ],
+    "cucumberOpts": {  
+        "require": [  
+            "[filepath]/**/*{js,ts}",  
+            "[filepath]{js,ts}",  
+            "cypress/support/step_definitions/*{js,ts}"  
+        ]  
+    }   
+}
