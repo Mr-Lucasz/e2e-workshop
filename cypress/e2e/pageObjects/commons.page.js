@@ -1,6 +1,6 @@
 import { loginElements } from "../elements/elements.js";
 
-const loginCommons = {
+const commonPage = {
   loginPage: () => {
     cy.visit(`${Cypress.config("baseUrl")}/login/index.php`);
     cy.get(loginElements.username).click().type(Cypress.env("USERNAME"));
@@ -11,4 +11,4 @@ const loginCommons = {
   },
 };
 
-module.exports = { loginCommons };
+module.exports = {commonPage};

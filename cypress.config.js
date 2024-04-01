@@ -11,28 +11,26 @@ function getConfigurationByFile(file) {
   return fs.readJson(pathToConfigFile);
 }
 
-async function setupNodeEvents(on, config){
-
+async function setupNodeEvents(on, config) {
   const file = config.env.configFile || "local";
-  const envConfig = await getConfigurationByFile(file)
+  const envConfig = await getConfigurationByFile(file);
 
   config.baseUrl = envConfig.baseUrl;
   //o arquivo de configuração seja acessível em qualquer lugar do código
   config.env = Object.assign(config.env, envConfig);
-  
+
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
 
   // Definindo o preprocessor para usar o esbuild
   on(
-      "file:preprocessor",
-      createBundler({
-          plugins: [createEsbuildPlugin.default(config)],
-      })
+    "file:preprocessor",
+    createBundler({
+      plugins: [createEsbuildPlugin.default(config)],
+    })
   );
 
   return config;
 }
-
 
 // Configurando o Cypress
 module.exports = defineConfig({
@@ -50,7 +48,7 @@ module.exports = defineConfig({
     viewportWidth: 1200,
     viewportHeight: 900,
     experimentalRunAllSpecs: true,
-
-    },
-    experimentalMemoryManagement: true
-  });
+  },
+  experimentalMemoryManagement: true,
+});
+https://ab-inbev.atlassian.net/browse/HIVE-49336https://ab-inbev.atlassian.net/browse/HIVE-49336https://ab-inbev.atlassian.net/browse/HIVE-49336

@@ -1,6 +1,6 @@
 //pagesObjects/Login.page.js
 import { loginElements } from "../elements/elements.js";
-import {login} from "../pageObjects/commons.page.js";
+import { login } from "../pageObjects/commons.page.js";
 
 const loginPage = {
   loginPage: () => {
@@ -15,9 +15,7 @@ const loginPage = {
   loginCheckLoggedIn: () => {
     cy.get(loginElements.logoutButtonMenuItemToggle).should("be.visible");
   },
-};
 
-const logoutPage = {
   checkLoginBeforeLogout: () => {
     login.loginPage();
   },
@@ -34,4 +32,4 @@ const logoutPage = {
   },
 };
 
-module.exports = { logoutPage, loginPage };
+module.exports = {loginPage };
