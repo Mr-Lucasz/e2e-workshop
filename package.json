@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cypress:open": "cypress open",
+    "cypress:open": "CYPRESS_USERNAME='01295230208' CYPRESS_SENHA='Jesu$.33' cypress open",
     "cypress:run": "cypress run"
   },
   "author": "lucas-egswf",
@@ -13,6 +13,7 @@
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^13.7.0",
+    "cypress-xpath": "^2.0.1",
     "esbuild": "^0.20.2"
   },
   "dependencies": {
@@ -24,4 +25,3 @@
     "supportFiles": "./cypress/e2e/support/**/*.{js,mjs,ts,tsx}"
   }
 }
-/

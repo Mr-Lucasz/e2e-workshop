@@ -1,22 +1,37 @@
 //pagesObjects/Login.page.js
-import { loginElements } from "../elements/loginElements";
+import { loginElements } from "../elements/elements.js";
+import {login} from "../commons/commons.page.js";
 
 const loginPage = {
-  login: () => {
+  loginPage: () => {
+    cy.visit(`${Cypress.config("baseUrl")}/login/index.php`);
+  },
 
-    if(Cypress.config("secondUrl") && cy.get(loginElements.visitante).contains("Você acessou como visitante")){
-      cy.visit(`${Cypress.config("baseUrl")}/login/index.php`);
-      cy.get(loginElements.username).type(`${Cypress.env("USERNAME")}`);
-      cy.get(loginElements.password).type(`${Cypress.env("SENHA")}`);
-      cy.get(loginElements.submitButton).click();
-    }
+  loginValidCredentials: () => {
+    cy.get(loginElements.username).click().type(Cypress.env("USERNAME"));
+    cy.get(loginElements.password).type(Cypress.env("SENHA"));
+    cy.get(loginElements.submitButton).click();
+  },
+  loginCheckLoggedIn: () => {
     cy.get(loginElements.logoutButtonMenuItemToggle).should("be.visible");
+  },
+};
+
+const logoutPage = {
+  checkLoginBeforeLogout: () => {
+    login.loginPage();
   },
 
   logout: () => {
     cy.get(loginElements.logoutButtonMenuItemToggle).click();
     cy.get(loginElements.logoutButton).click();
   },
+
+  checkLogout: () => {
+    cy.get(loginElements.checkLogout)
+      .should("be.visible")
+      .contains("Você acessou como visitante");
+  },
 };
 
-module.exports = loginPage;
+module.exports = { logoutPage, loginPage };
