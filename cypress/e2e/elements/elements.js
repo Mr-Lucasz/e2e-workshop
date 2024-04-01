@@ -9,3 +9,11 @@ visitante: '#yui_3_18_1_1_1711542384169_28',
 checkLogout: '#usernavigation > div.d-flex.align-items-stretch.usermenu-container > div > span'
 
 };
+
+export const homeElements = {
+    labelPainel:"#instance-1272203-header",
+    navbarPainel: "#moremenu-660a419868bf8-navbar-nav > li:nth-child(2)",
+    navbarMinhasSalas: "#moremenu-660a419868bf8-navbar-nav > li:nth-child(3)",
+    
+
+};

@@ -1,6 +1,6 @@
 //pagesObjects/Login.page.js
 import { loginElements } from "../elements/elements.js";
-import {login} from "../commons/commons.page.js";
+import {login} from "../pageObjects/commons.page.js";
 
 const loginPage = {
   loginPage: () => {
