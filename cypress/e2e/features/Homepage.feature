@@ -1,4 +1,4 @@
-# features/HomePage.feature
+
 Feature: HomePage
 
     Scenario: Visit the homepage

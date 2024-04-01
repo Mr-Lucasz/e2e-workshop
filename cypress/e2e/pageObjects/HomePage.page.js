@@ -27,37 +27,27 @@ const homePage = {
     cy.get(homeElements.menuMessages).should("be.visible");
   },
 
-  checkUserMenuToggleUSer: () => {
-    cy.get(homeElements.userMenuToggleAcessibilidade)
+  checkVisibilityAndContent: (element, content) => {
+    cy.get(element)
       .should("be.visible")
-      .contains("Acessibilidade");
-    cy.get(homeElements.userMenuTogglePerfil)
-      .should("be.visible")
-      .contains("Perfil");
-    cy.get(homeElements.userMenuToggleNotas)
-      .should("be.visible")
-      .contains("Notas");
-    cy.get(homeElements.userMenuToggleCalendario)
-      .should("be.visible")
-      .contains("Calendário");
-    cy.get(homeElements.userMenuToggleMensagens)
-      .should("be.visible")
-      .contains("Mensagens");
-    cy.get(homeElements.userMenuToggleArquivosPrivados)
-      .should("be.visible")
-      .contains("Arquivos privados");
-    cy.get(homeElements.userMenuToggleRelatorios)
-      .should("be.visible")
-      .contains("Relatórios");
-    cy.get(homeElements.userMenuTogglePreferencias)
-      .should("be.visible")
-      .contains("Preferências");
-    cy.get(homeElements.userMenuToggleIdioma)
-      .should("be.visible")
-      .contains("Idioma");
-    cy.get(homeElements.userMenuToggleSair)
-      .should("be.visible")
-      .contains("Sair");
+      .contains(content);
+  },
+  
+   checkUserMenuToggleUSer: () => {
+    const menuItems = [
+      { element: homeElements.userMenuToggleAcessibilidade, content: "Acessibilidade" },
+      { element: homeElements.userMenuTogglePerfil, content: "Perfil" },
+      { element: homeElements.userMenuToggleNotas, content: "Notas" },
+      { element: homeElements.userMenuToggleCalendario, content: "Calendário" },
+      { element: homeElements.userMenuToggleMensagens, content: "Mensagens" },
+      { element: homeElements.userMenuToggleArquivosPrivados, content: "Arquivos privados" },
+      { element: homeElements.userMenuToggleRelatorios, content: "Relatórios" },
+      { element: homeElements.userMenuTogglePreferencias, content: "Preferências" },
+      { element: homeElements.userMenuToggleIdioma, content: "Idioma" },
+      { element: homeElements.userMenuToggleSair, content: "Sair" },
+    ];
+  
+    menuItems.forEach(item => checkVisibilityAndContent(item.element, item.content));
   },
 
   // Scenario: Filter by category in section Linha do Tempo
@@ -95,3 +85,5 @@ const homePage = {
     );
   },
 };
+
+module.exports = { homePage };
