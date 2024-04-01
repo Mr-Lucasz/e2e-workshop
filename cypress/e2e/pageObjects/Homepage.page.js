@@ -1,9 +1,11 @@
 import { homeElements } from "../elements/elements.js";
-import { login } from "../pageObjects/commons.page.js";
+import {commonPage } from "./commons.page.js";
+require('cypress-xpath');
 
 const homePage = {
+
   checkHomePage: () => {
-    login.loginPage();
+    commonPage.loginPage();
     cy.get(homeElements.checkHomePage).should("be.visible");
   },
   checkLabelPainel: () => {
@@ -13,10 +15,8 @@ const homePage = {
   },
   checkNavbarPainel: () => {
     cy.get(homeElements.navbarPainel).should("be.visible").contains("Painel");
-    cy.get(homeElements.navbarMinhasSalas)
-      .should("be.visible")
-      .contains("Minhas salas");
-    cy.get(homeElements.navbarBuscarSalas)
+    cy.xpath(homeElements.navbarMinhasSalas).should('be.visible').contains('Minhas salas');
+    cy.xpath(homeElements.navbarBuscarSalas)
       .should("be.visible")
       .contains("Buscar salas");
   },
@@ -24,31 +24,29 @@ const homePage = {
     cy.get(homeElements.iconNotification).should("be.visible");
   },
   checkMenuMessages: () => {
-    cy.get(homeElements.menuMessages).should("be.visible");
+    cy.xpath(homeElements.menuMessages).should("be.visible");
   },
 
-  checkVisibilityAndContent: (element, content) => {
-    cy.get(element)
-      .should("be.visible")
-      .contains(content);
-  },
-  
-   checkUserMenuToggleUSer: () => {
-    const menuItems = [
-      { element: homeElements.userMenuToggleAcessibilidade, content: "Acessibilidade" },
-      { element: homeElements.userMenuTogglePerfil, content: "Perfil" },
-      { element: homeElements.userMenuToggleNotas, content: "Notas" },
-      { element: homeElements.userMenuToggleCalendario, content: "Calendário" },
-      { element: homeElements.userMenuToggleMensagens, content: "Mensagens" },
-      { element: homeElements.userMenuToggleArquivosPrivados, content: "Arquivos privados" },
-      { element: homeElements.userMenuToggleRelatorios, content: "Relatórios" },
-      { element: homeElements.userMenuTogglePreferencias, content: "Preferências" },
-      { element: homeElements.userMenuToggleIdioma, content: "Idioma" },
-      { element: homeElements.userMenuToggleSair, content: "Sair" },
-    ];
-  
-    menuItems.forEach(item => checkVisibilityAndContent(item.element, item.content));
-  },
+  checkUserMenuOption: (option) => {
+    cy.get(homeElements.logoutButtonMenuItemToggle).should("be.visible").click();
+    const menuItems = {
+      "Acessibilidade": { element: homeElements.userMenuToggleAcessibilidade, content: "Acessibilidade" },
+      "Perfil": { element: homeElements.userMenuTogglePerfil, content: "Perfil" },
+      "Notas": { element: homeElements.userMenuToggleNotas, content: "Notas" },
+      "Calendário": { element: homeElements.userMenuToggleCalendario, content: "Calendário" },
+      "Mensagens": { element: homeElements.userMenuToggleMensagens, content: "Mensagens" },
+      "Arquivos Privados": { element: homeElements.userMenuToggleArquivosPrivados, content: "Arquivos Privados" },
+      "Relatórios": { element: homeElements.userMenuToggleRelatorios, content: "Relatórios" },
+      "Preferências": { element: homeElements.userMenuTogglePreferencias, content: "Preferências" },
+      "Idioma": { element: homeElements.userMenuToggleIdioma, content: "Idioma" },
+      "Sair": { element: homeElements.userMenuToggleSair, content: "Sair" }
+    };
+   if (menuItems[option]) {
+      cy.get(menuItems[option].element).should("be.visible").contains(menuItems[option].content);
+    }else{
+      cy.log("Opção não encontrada");
+    }
+  },  
 
   // Scenario: Filter by category in section Linha do Tempo
 

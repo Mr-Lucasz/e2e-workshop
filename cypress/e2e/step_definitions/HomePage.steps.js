@@ -1,30 +1,34 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { loginPage, logoutPage } from "../pageObjects/Login.page";
-import { homePage } from "../pageObjects/HomePage.page";
+import { homePage } from "../pageObjects/Homepage.page";
 
 //var search
-
 
 Given(/^I am on the homepage$/, () => {
   homePage.checkHomePage();
 });
-Then(/^I should see "Cursos acessados recentemente"$/, () => {
+
+When(/^I should see "Cursos acessados recentemente"$/, () => {
   homePage.checkLabelPainel();
 });
-Then(
-  /^vejo a tab com a opções "Painel", "Minhas Salas" e "Buscar salas"$/,
+
+When(
+  'vejo a tab com as opções "Painel", "Minhas Salas" e "Buscar salas"',
   () => {
     homePage.checkNavbarPainel();
   }
 );
-Then(/^vejo o Icone de notificação$/, () => {
+
+When(/^vejo o Icone de notificação$/, () => {
   homePage.checkIconNotification();
 });
-Then(/^vejo Menu de mensagens$/, () => {
+
+When(/^vejo Menu de mensagens$/, () => {
   homePage.checkMenuMessages();
 });
-Then(/^vejo "user-menu-toggle" com as <options>$/, () => {
-  homePage.checkUserMenuToggleUSer();
+
+
+Then(/^vejo "user-menu-toggle" com a opção (.+)$/, (option) => {
+  homePage.checkUserMenuOption(option);
 });
 
 When(/^check section com nome "Linha do Tempo"$/, () => {

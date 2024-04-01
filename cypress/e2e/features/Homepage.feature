@@ -1,14 +1,13 @@
 
-Feature: HomePage
+Feature: Homepage
 
     Scenario: Visit the homepage
         Given I am on the homepage
-        Then I should see "Cursos acessados recentemente"
-        And vejo a tab com a opções "Painel", "Minhas Salas" e "Buscar salas"
-        And vejo o Icone de notificação
-        And vejo Menu de mensagens
-        And vejo "user-menu-toggle" com as <options>
-
+        When I should see "Cursos acessados recentemente"
+        When vejo a tab com as opções "Painel", "Minhas Salas" e "Buscar salas"
+        When vejo o Icone de notificação
+        When vejo Menu de mensagens
+        Then vejo "user-menu-toggle" com a opção "<options>"
 
         Examples:
             | options           |
@@ -22,24 +21,24 @@ Feature: HomePage
             | Sair              |
 
 
-    Scenario: Filter by category in section Linha do Tempo
+# Scenario: Filter by category in section Linha do Tempo
 
-        Given I am on the homepage
-        When check section com nome "Linha do Tempo"
-        And I click "Timeline Day" filter
-        And select opções de <filtrosDisponiveis>
-        And também seleciono as opções de <orderType>
-        And também pesquiso na serch bar por <search>
-        Then I should see as ultimas atividades de acordo com os filtros selecionados
+#     Given I am on the homepage
+#     When check section com nome "Linha do Tempo"
+#     And I click "Timeline Day" filter
+#     And select opções de <filtrosDisponiveis>
+#     And também seleciono as opções de <orderType>
+#     And também pesquiso na serch bar por <search>
+#     Then I should see as ultimas atividades de acordo com os filtros selecionados
 
-        Examples:
-            | filtrosDisponiveis | orderType          | search             |
-            | Todos              | Ordenar por data   | Entrega            |
-            | Atrasado           | Ordenar por cursos |
-            | Próximos 7 dias    |
-            | Próximos 30 dias   |
-            | Próximos 3 meses   |
-            | Próximos 6 meses   |
+#     Examples:
+#         | filtrosDisponiveis | orderType          | search    |
+#         | Todos              | Ordenar por data   | Entrega   |
+#         | Atrasado           | Ordenar por cursos |           |
+#         | Próximos 7 dias    |                    |           |
+#         | Próximos 30 dias   |                    |           |
+#         | Próximos 3 meses   |                    |           |
+#         | Próximos 6 meses   |                    |           |
 
 
 

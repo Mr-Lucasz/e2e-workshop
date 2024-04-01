@@ -11,12 +11,13 @@ checkLogout: '#usernavigation > div.d-flex.align-items-stretch.usermenu-containe
 };
 
 export const homeElements = {
+    checkHomePage: "#user-menu-toggle",
     labelPainel:"#instance-1272203-header",
-    navbarPainel: "#moremenu-660ab14210122-navbar-nav > li:nth-child(2)",
-    navbarMinhasSalas: "#moremenu-660ab14210122-navbar-nav > li:nth-child(4)",
-    navbarBuscarSalas: "#moremenu-660ab14210122-navbar-nav > li:nth-child(5)",
-    iconNotification: "#nav-notification-popover-container > div.popover-region-toggle.nav-link.icon-no-margin",
-    menuMessages: "#message-drawer-toggle-660ab14233b32660ab142106f96 > i",
+    navbarPainel: '[data-key="myhome"]',
+    navbarMinhasSalas: '//li/a[contains(text(), "Minhas salas")]',
+    navbarBuscarSalas: '//li/a[contains(text(), "Buscar salas")]',
+    iconNotification: "#nav-notification-popover-container",
+    menuMessages: '//*[@id="usernavigation"]/div[3]',
     userMenuToggleAcessibilidade: "#accessibilitysettings-control",
     userMenuTogglePerfil: "#carousel-item-main > a:nth-child(3)",
     userMenuToggleNotas: "#carousel-item-main > a:nth-child(4)",
