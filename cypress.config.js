@@ -51,4 +51,3 @@ module.exports = defineConfig({
   },
   experimentalMemoryManagement: true,
 });
-https://ab-inbev.atlassian.net/browse/HIVE-49336https://ab-inbev.atlassian.net/browse/HIVE-49336https://ab-inbev.atlassian.net/browse/HIVE-49336
