@@ -28,6 +28,28 @@ export const homeElements = {
     userMenuToggleIdioma: "#carousel-item-main > a.carousel-navigation-link.dropdown-item",
     userMenuToggleSair: "#carousel-item-main > a:nth-child(13)",
 
+    // Linha do Tempo
+
+    sectionLinhaDoTempo: "#instance-1272204-header",
+    timelineDayFilter: "#yui_3_18_1_1_1711976770798_38",
+    filterOptionTodos: "#menudayfilter > a:nth-child(1)",
+    filterOptionAtrasado: "#menudayfilter > a:nth-child(2)",
+    filterOption7day: "#menudayfilter > a:nth-child(5)",
+    filterOption30day: "#menudayfilter > a:nth-child(6)",
+    filterOption3month: "#menudayfilter > a:nth-child(7)",
+    filterOption6month: "#menudayfilter > a:nth-child(8)",
+    orderType: "#yui_3_18_1_1_1711976770798_41 > div.mr-auto.mb-1 > div > button",
+    orderTypeOptionData: "#menusortby > a:nth-child(1)",
+    orderTypeOptionCursos: "#menusortby > a:nth-child(2)",
+    searchBar: "#searchinput-660ab1422e0a1660ab142106f93",
+    sectionLastActivitiesList: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2)",
+    sectionLastActivitiesListItems: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2) > div > div:nth-child(2)",
+    sectionLastActivitiesListItemsTitle: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div.d-flex.flex-wrap.pb-1 > div.d-flex.mr-auto.pb-1.mw-100.timeline-name > div.event-name-container.flex-grow-1.line-height-3.nowrap.text-truncate > div > h6"
+    
+
+
+
+
 
 
 

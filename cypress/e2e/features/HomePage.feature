@@ -31,12 +31,10 @@ Feature: HomePage
         And também seleciono as opções de <orderType>
         And também pesquiso na serch bar por <search>
         Then I should see as ultimas atividades de acordo com os filtros selecionados
-        
-
 
         Examples:
-            | filtrosDisponiveis | orderType          |
-            | Todos              | Ordenar por data   |
+            | filtrosDisponiveis | orderType          | search             |
+            | Todos              | Ordenar por data   | Entrega            |
             | Atrasado           | Ordenar por cursos |
             | Próximos 7 dias    |
             | Próximos 30 dias   |
