@@ -3,8 +3,6 @@ const { defineConfig } = require("cypress");
 const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
 const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
 const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
-
-
 const fs = require("fs-extra");
 const path = require("path");
 
@@ -16,7 +14,7 @@ function getConfigurationByFile(file) {
 async function setupNodeEvents(on, config){
 
   const file = config.env.configFile || "local";
-  const envConfig = await getConfigurationByFile(file);
+  const envConfig = await getConfigurationByFile(file)
 
   config.baseUrl = envConfig.baseUrl;
   //o arquivo de configuração seja acessível em qualquer lugar do código

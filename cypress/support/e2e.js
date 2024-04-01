@@ -1,6 +1,7 @@
-// Importações necessárias
+//support/e2e.js
 import loginPage from "../e2e/pageObjects/Login.page";
 import "cypress-localstorage-commands";
+
 
 // Configuração do Cypress para executar os testes de forma mais rápida
 Cypress.on("uncaught:exception", (err, runnable) => {
@@ -13,6 +14,6 @@ beforeEach(() => {
   });
 });
 
-after() => {
-  cy.clearLocalStorage();
-};
+after(() => {
+  loginPage.logout();
+});
