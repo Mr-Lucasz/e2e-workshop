@@ -27,7 +27,7 @@ When(/^vejo Menu de mensagens$/, () => {
 });
 
 
-Then(/^vejo "user-menu-toggle" com a opção (.+)$/, (option) => {
+Then(/^clico no "user-menu-toggle" e vejo a opção "(.+)" no dropdown$/, (option) => {
   homePage.checkUserMenuOption(option);
 });
 

@@ -23,11 +23,13 @@ export const homeElements = {
     userMenuToggleNotas: "#carousel-item-main > a:nth-child(4)",
     userMenuToggleCalendario: "#carousel-item-main > a:nth-child(5)",
     userMenuToggleMensagens: "#carousel-item-main > a:nth-child(6)",
-    userMenuToggleArquivosPrivados: "#carousel-item-main > a:nth-child(7)",
+    userMenuToggleArquivosPrivados: '//*[@id="carousel-item-main"]/a[6]',
     userMenuToggleRelatorios: "#carousel-item-main > a:nth-child(8)",
     userMenuTogglePreferencias: "#carousel-item-main > a:nth-child(10)",
     userMenuToggleIdioma: "#carousel-item-main > a.carousel-navigation-link.dropdown-item",
     userMenuToggleSair: "#carousel-item-main > a:nth-child(13)",
+    userToggleMenu: "#user-menu-toggle",
+    dropdownMenu: "#user-action-menu",
 
     // Linha do Tempo
 

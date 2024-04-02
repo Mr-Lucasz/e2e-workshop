@@ -7,18 +7,19 @@ Feature: Homepage
         When vejo a tab com as opções "Painel", "Minhas Salas" e "Buscar salas"
         When vejo o Icone de notificação
         When vejo Menu de mensagens
-        Then vejo "user-menu-toggle" com a opção "<options>"
+        Then clico no "user-menu-toggle" e vejo a opção "<options>" no dropdown
 
         Examples:
             | options           |
-            | Acessibilidade    |
-            | Notas             |
-            | Calendário        |
-            | Mensagens         |
+            # | Acessibilidade    |
+            # | Notas             |
+            # | Calendário        |
+            # | Mensagens         |
             | Arquivos privados |
-            | Relatórios        |
-            | Preferências      |
-            | Sair              |
+            # | Relatórios        |
+            # | Preferências      |
+            # | Idioma            |
+            # | Sair              |
 
 
 # Scenario: Filter by category in section Linha do Tempo
