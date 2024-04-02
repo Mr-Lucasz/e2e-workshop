@@ -16,6 +16,6 @@ Cypress.Commands.add('login', () => {
     cy.login();
   });
   
-  afterEach(() => {
+  after(() => {
     cy.logout();
   });
