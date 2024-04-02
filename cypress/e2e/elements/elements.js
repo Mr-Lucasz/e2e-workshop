@@ -23,7 +23,7 @@ export const homeElements = {
     userMenuToggleNotas: "#carousel-item-main > a:nth-child(4)",
     userMenuToggleCalendario: "#carousel-item-main > a:nth-child(5)",
     userMenuToggleMensagens: "#carousel-item-main > a:nth-child(6)",
-    userMenuToggleArquivosPrivados: '//*[@id="carousel-item-main"]/a[6]',
+    userMenuToggleArquivosPrivados: '//a[contains(text(), "Arquivos privados")]',
     userMenuToggleRelatorios: "#carousel-item-main > a:nth-child(8)",
     userMenuTogglePreferencias: "#carousel-item-main > a:nth-child(10)",
     userMenuToggleIdioma: "#carousel-item-main > a.carousel-navigation-link.dropdown-item",
@@ -34,8 +34,8 @@ export const homeElements = {
     // Linha do Tempo
 
     sectionLinhaDoTempo: "#instance-1272204-header",
-    timelineDayFilter: "#yui_3_18_1_1_1711976770798_38",
-    filterOptionTodos: "#menudayfilter > a:nth-child(1)",
+    timelineDayFilter:'[data-region="day-filter"] > button',
+    filterOptionTodos: "#yui_3_18_1_1_1712063880546_42",
     filterOptionAtrasado: "#menudayfilter > a:nth-child(2)",
     filterOption7day: "#menudayfilter > a:nth-child(5)",
     filterOption30day: "#menudayfilter > a:nth-child(6)",
@@ -48,14 +48,7 @@ export const homeElements = {
     sectionLastActivitiesList: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2)",
     sectionLastActivitiesListItems: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2) > div > div:nth-child(2)",
     sectionLastActivitiesListItemsTitle: "#view_dates_660ab1422e0a1660ab142106f93-1 > div > div > div:nth-child(2) > div > div:nth-child(2) > div > div.d-flex.flex-wrap.pb-1 > div.d-flex.mr-auto.pb-1.mw-100.timeline-name > div.event-name-container.flex-grow-1.line-height-3.nowrap.text-truncate > div > h6"
-    
 
 
-
-
-
-
-
-    
 
 };

@@ -9,6 +9,14 @@ const commonPage = {
     //esperar carregar a home, await?
     cy.get(loginElements.logoutButtonMenuItemToggle).should("be.visible");
   },
+
+  logoutPage: () => {
+    cy.get(loginElements.logoutButtonMenuItemToggle).click();
+    cy.get(loginElements.logoutButton).click();
+    cy.get(loginElements.checkLogout)
+    .should("be.visible")
+    .contains("Você acessou como visitante");
+  },
 };
 
 module.exports = {commonPage};
