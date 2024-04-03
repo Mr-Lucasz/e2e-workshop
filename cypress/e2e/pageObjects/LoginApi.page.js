@@ -28,12 +28,12 @@ const loginPage = {
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate"
     ).as("login");
     cy.get(loginElements.submit).click();
-    cy.wait("@login").then((interception) => {
-      expect(interception.response.statusCode).to.eq(302);
-    });
   },
 
   redirectHome: () => {
+    cy.wait("@login").then((interception) => {
+      expect(interception.response.statusCode).to.eq(302);
+    });
     cy.url().should(
       "eq",
       "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
