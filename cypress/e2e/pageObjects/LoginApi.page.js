@@ -2,7 +2,7 @@
 import { loginElements } from "../elements/elements.js";
 import { commons } from "./commons.page.js";
 
-const loginPage = {
+const loginPageApi = {
   // Scenario: Usuário efetua login com credenciais válidas
   // Given que o usuário está na página de login
   // When o usuário insere um nome de usuário e senha válidos
@@ -49,4 +49,4 @@ const loginPage = {
   },
 };
 
-module.exports = { loginPage };
+module.exports = { loginPageApi };

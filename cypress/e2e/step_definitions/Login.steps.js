@@ -1,29 +1,24 @@
-//steps_defintions/Login.steps.js
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { loginPage} from "../pageObjects/LoginApi.page";
-import {commonPage} from "../pageObjects/commons.page";
-  
-  Given("que o usuário está na página de login", () => {
-    loginPage.accessPage();
+import { loginPage } from "../pageObjects/Login.page";
+
+// Given que o usuário está na página de login
+// When eu insiro um nome de usuário e senha válidos e clico no botão de login
+// Then eu devo ser redirecionado para a página inicial do usuário e ver a Home do usuário
+
+Given("que o usuário está na página de login", () => {
+  loginPage.acessaLogin();
+});
+
+When(
+  "eu insiro um nome de usuário e senha válidos e clico no botão de login",
+  () => {
+    loginPage.insereCredenciaisValidas();
   }
-  );
-  
-  When("o usuário insere um nome de usuário e senha válidos", () => {
-    loginPage.loginValidCredentials();
+);
+
+Then(
+  "eu devo ser redirecionado para a página inicial do usuário e ver a Home do usuário",
+  () => {
+    loginPage.redirecionaHome();
   }
-  );
-  
-  When("o usuário clica no botão de login", () => {
-    loginPage.submitLogin();
-  }
-  );
-  
-  Then("o usuário deve ser redirecionado para a página inicial", () => {
-    loginPage.redirectHome();
-  }
-  );
-  
-  Then("a API de login deve responder com um token de acesso", () => {
-    loginPage.checkToken();
-  }
-  );
+);
