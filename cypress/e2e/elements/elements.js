@@ -16,7 +16,8 @@ openMenu: '#react-burger-menu-btn',
 title: '[data-test = title]',
 navbar: "#bm-menu-wrap",
 logoutButton: "[data-test = logout-sidebar-link]",
-checkLoginPage: '#root > div > div.login_logo'
+checkLoginPage: '#root > div > div.login_logo',
+msgError: '[data-test=error]',
 
 
 };
