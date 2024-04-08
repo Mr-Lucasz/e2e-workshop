@@ -1,6 +1,8 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { loginPage } from "../pageObjects/Login.page";
 
+//   Scenario: Login bem-sucedido
+
 Given("que o usuário está na página de login", () => {
   loginPage.acessaLogin();
 });
@@ -20,40 +22,46 @@ Then(
   }
 );
 
-Given("que eu sou um usuário registrado e eu estou na página de login", () => {
-  loginPage.acessaLogin();
-});
+// Scenario: Tentativa de login com senha incorreta
 
 When(
-  "eu insiro um nome de usuário válido e uma senha incorreta e eu clico no botão de login",
+  "eu insiro um nome de usuário válido e uma senha incorreta e eu clico no botão de login, permaneço na página de login",
   () => {
     loginPage.insereSenhaIncorreta();
   }
 );
 
 Then("eu devo ver uma mensagem de erro de {string}", (msgError) => {
-  loginPage.checkMensagemErro(msgError);
-  loginPage.logout();
+  if (
+    msgError ===
+    "Epic sadface: Username and password do not match any user in this service"
+  ) {
+    loginPage.checkMensagemErro(msgError);
+  } else if (msgError === "Epic sadface: Username is required") {
+    loginPage.checkMensagemErroUserEmpty(msgError);
+  } else if (msgError === "Epic sadface: Password is required") {
+    loginPage.checkMensagemErroUserEmpty(msgError);
+  }
 });
+
+// Scenario: Tentativa de login sem preencher nome de usuário ou senha
+// Given que eu sou um usuário registrado e eu estou na página de login
 
 Given("que eu sou um usuário registrado e eu estou na página de login", () => {
-  loginPage.acessaLogin();
-});
+cy.visit(Cypress.env("BASE_URL"));
+}
+);
 
-When("eu não preencho o campo de nome de usuário", () => {
+
+
+When("eu não preencho o campo de nome de usuário permaneço na página de login", () => {
+
   loginPage.insereFieldUserEmpty();
-});
+}
+);
 
-Then("eu devo ver uma mensagem de erro de {string}", (msgError) => {
-  loginPage.checkMensagemErroUserEmpty(msgError);
-  loginPage.logout();
-});
+When("eu não preencho o campo de senha permaneço na página de login", () => {
+  loginPage.insereFieldPasswordEmpty();
+}
+);
 
-When("eu não preencho o campo de senha", () => {
-  loginPage.insereFieldUserEmpty();
-});
-
-Then("eu devo ver uma mensagem de erro de {string}", (msgError) => {
-  loginPage.checkMensagemErroUserEmpty(msgError);
-  loginPage.logout();
-});

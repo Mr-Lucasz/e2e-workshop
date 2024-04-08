@@ -1,3 +1,5 @@
 {
-    "baseUrl": "https://www.saucedemo.com/"
-}
+    "BASE_URL": "https://www.saucedemo.com/",
+    "USERNAME": "standard_user",
+    "SENHA": "secret_sauce"
+  }

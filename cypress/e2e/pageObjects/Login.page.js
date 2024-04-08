@@ -15,7 +15,7 @@ loginPage = {
   },
 
   redirecionaHome: () => {
-    cy.get(loginElements.header).should("be.visible").contains("Products");
+    cy.get(loginElements.header).should("be.visible").contains("Swag Labs");
     cy.get(loginElements.cartContainer).should("be.visible");
     cy.get(loginElements.openMenu).should("be.visible");
     cy.get(loginElements.title).should("be.visible").contains("Products");
@@ -46,6 +46,7 @@ loginPage = {
   },
 
   insereFieldUserEmpty: () => {
+    cy.get(loginElements.usernameInput).clear();
     cy.get(loginElements.passwordInput).click().type(Cypress.env("SENHA"));
     cy.get(loginElements.submitButton).click();
     cy.get(loginElements.checkLoginPage)
@@ -59,6 +60,7 @@ loginPage = {
 
   insereFieldPasswordEmpty: () => {
     cy.get(loginElements.usernameInput).click().type(Cypress.env("USERNAME"));
+    cy.get(loginElements.passwordInput).clear();
     cy.get(loginElements.submitButton).click();
     cy.get(loginElements.checkLoginPage)
       .should("be.visible")
