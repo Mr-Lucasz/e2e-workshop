@@ -10,3 +10,6 @@ commonPage = {
         cy.get(loginElements.submitButton).click();
     }
 };
+
+
+module.exports = { commonPage };
