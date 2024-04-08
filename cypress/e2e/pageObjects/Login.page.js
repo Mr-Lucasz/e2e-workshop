@@ -2,7 +2,7 @@ import { loginElements } from "../elements/elements.js";
 
 loginPage = {
   acessaLogin: () => {
-    cy.visit(`${Cypress.config("baseUrl")}`);
+    cy.visit(Cypress.env("BASE_URL"));  
     cy.get(loginElements.usernameInput).should("be.visible");
     cy.get(loginElements.passwordInput).should("be.visible");
     cy.get(loginElements.submitButton).should("be.visible");

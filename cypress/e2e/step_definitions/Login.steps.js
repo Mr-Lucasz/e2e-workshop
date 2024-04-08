@@ -1,10 +1,6 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { loginPage } from "../pageObjects/Login.page";
 
-// Given que o usuário está na página de login
-// When eu insiro um nome de usuário e senha válidos e clico no botão de login
-// Then eu devo ser redirecionado para a página inicial do usuário e ver a Home do usuário
-
 Given("que o usuário está na página de login", () => {
   loginPage.acessaLogin();
 });
@@ -39,13 +35,6 @@ Then("eu devo ver uma mensagem de erro de {string}", (msgError) => {
   loginPage.checkMensagemErro(msgError);
   loginPage.logout();
 });
-
-// Scenario: Tentativa de login sem preencher nome de usuário ou senha
-//Given que eu sou um usuário registrado e eu estou na página de login
-// When eu não preencho o campo de nome de usuário permaneço na página de login
-// Then eu devo ver uma mensagem de erro de "Epic sadface: Username is required"
-// When eu não preencho o campo de senha permaneço na página de login
-//  Then eu devo ver uma mensagem de erro de "Epic sadface: Password is required"
 
 Given("que eu sou um usuário registrado e eu estou na página de login", () => {
   loginPage.acessaLogin();

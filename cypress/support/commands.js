@@ -1,7 +1,7 @@
 // cypress/support/commands.js
 
 Cypress.Commands.add('login', () => {
-    cy.visit(`${Cypress.config("baseUrl")}/login/index.php`);
+    cy.visit(`${Cypress.config("baseUrl")}`);
     cy.get(loginElements.username).click().type(Cypress.env("USERNAME"));
     cy.get(loginElements.password).type(Cypress.env("SENHA"));
     cy.get(loginElements.submitButton).click();
