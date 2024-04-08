@@ -1,29 +1,22 @@
 //steps_defintions/Login.steps.js
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import { loginPageApi} from "../pageObjects/LoginApi.page";
-import {commonPage} from "../pageObjects/commons.page";
-  
-  Given("que o usuário está na página de login", () => {
+
+
+// Scenario: Teste de API Login
+// Given que eu tenha um usuário cadastrado
+// When eu faço uma requisição para a API de login
+// Then a API deve me retornar um token de autenticação]
+
+Given("que eu tenha um usuário cadastrado", () => {
     loginPageApi.accessPage();
-  }
-  );
-  
-  When("o usuário insere um nome de usuário e senha válidos", () => {
+  });
+
+When("eu faço uma requisição para a API de login", () => {
     loginPageApi.loginValidCredentials();
-  }
-  );
-  
-  When("o usuário clica no botão de login", () => {
     loginPageApi.submitLogin();
-  }
-  );
-  
-  Then("o usuário deve ser redirecionado para a página inicial", () => {
+  });
+
+Then("a API deve me retornar um token de autenticação", () => {
     loginPageApi.redirectHome();
-  }
-  );
-  
-  Then("a API de login deve responder com um token de acesso", () => {
-    loginPageApi.checkToken();
-  }
-  );
+  });

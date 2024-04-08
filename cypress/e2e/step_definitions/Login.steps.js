@@ -45,23 +45,18 @@ Then("eu devo ver uma mensagem de erro de {string}", (msgError) => {
 });
 
 // Scenario: Tentativa de login sem preencher nome de usuário ou senha
-// Given que eu sou um usuário registrado e eu estou na página de login
 
 Given("que eu sou um usuário registrado e eu estou na página de login", () => {
-cy.visit(Cypress.env("BASE_URL"));
-}
-);
+  cy.visit(Cypress.env("BASE_URL"));
+});
 
-
-
-When("eu não preencho o campo de nome de usuário permaneço na página de login", () => {
-
-  loginPage.insereFieldUserEmpty();
-}
+When(
+  "eu não preencho o campo de nome de usuário permaneço na página de login",
+  () => {
+    loginPage.insereFieldUserEmpty();
+  }
 );
 
 When("eu não preencho o campo de senha permaneço na página de login", () => {
   loginPage.insereFieldPasswordEmpty();
-}
-);
-
+});

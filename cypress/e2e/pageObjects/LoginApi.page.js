@@ -1,14 +1,11 @@
 //pagesObjects/Login.page.js
 import { loginElements } from "../elements/elements.js";
-import { commons } from "./commons.page.js";
 
 const loginPageApi = {
-  // Scenario: Usuário efetua login com credenciais válidas
-  // Given que o usuário está na página de login
-  // When o usuário insere um nome de usuário e senha válidos
-  // When o usuário clica no botão de login
-  // Then o usuário deve ser redirecionado para a página inicial
-  // Then a API de login deve responder com um token de acesso
+  //Scenario: Teste de API Login
+  // Given que eu tenha um usuário cadastrado
+  // When eu faço uma requisição para a API de login
+  // Then a API deve me retornar um token de autenticação
 
   accessPage: () => {
     cy.visit(
@@ -28,23 +25,29 @@ const loginPageApi = {
       "https://opensource-demo.orangehrmlive.com/web/index.php/auth/validate"
     ).as("login");
     cy.get(loginElements.submit).click();
-  },
-
-  redirectHome: () => {
+    //check status code body payload(token)
     cy.wait("@login").then((interception) => {
       expect(interception.response.statusCode).to.eq(302);
-    });
-    cy.url().should(
-      "eq",
-      "https://opensource-demo.orangehrmlive.com/web/index.php/dashboard/index"
+      //check response body
+      let token = new URLSearchParams(interception.request.body).get("_token");
+      expect(token).to.not.be.null;
+    }
     );
   },
 
-  // Then a API de login deve responder com um token de acesso
-  
-  checkToken: () => {
-    cy.wait("@login").then((interception) => {
-      expect(interception.request.body).to.include('_token');
+  //response body: {"data":[{"id":4,"group":"Pending Self Reviews","pendingActionCount":1},{"id":5,"group":"Candidates To Interview","pendingActionCount":1}],"meta":[],"rels":[]}
+  redirectHome: () => {
+    cy.intercept(
+      "GET",
+      "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary"
+    ).as("home");
+    cy.wait("@home").then((interception) => {
+      expect(interception.response.statusCode).to.eq(200);
+      //check response body
+      expect(interception.response.body).to.have.property("data");
+      expect(interception.response.body).to.have.property("meta");
+      expect(interception.response.body).to.have.property("rels");
+
     });
   },
 };
