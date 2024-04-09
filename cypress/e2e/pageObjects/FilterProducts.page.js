@@ -1,6 +1,4 @@
-import { filter } from "cypress/types/bluebird/index.js";
 import { filterElements } from "../elements/elements.js";
-import cypress from "cypress";
 
 filterProducts = {
     //  Scenario:Validando filtros de produtos
