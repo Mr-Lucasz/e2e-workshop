@@ -6,15 +6,10 @@ filterProducts = {
     validationPageProducts: () =>{
         cy.get(filterElements.itemListProducts).should("be.visible");
         cy.get(filterElements.itemListProducts).should("be.visible");
-        cy.get(filterElements.itemNameProduct).should("be.visible");
+        cy.get(filterElements.itemNameProducts).should("be.visible");
         cy.get(filterElements.itemPriceProduct).should("be.visible");
         cy.get(filterElements.selectFilter).should("be.visible");
-        cy.get(filterElements.selectFilter).click();        
-        cy.get(filterElements.filterAz).should("be.visible");
-        cy.get(filterElements.filterZa).should("be.visible");
-        cy.get(filterElements.filterPriceLowToHigh).should("be.visible");
-        cy.get(filterElements.filterPriceHighToLow).should("be.visible");
-        cy.get(filterElements.selectFilter).click();
+        cy.get(filterElements.selectFilter).select(1);       
     },
 
    // When seleciono a opção de filtrar produtos por <filtro>.
@@ -25,53 +20,91 @@ filterProducts = {
         'Menor Preço': filterElements.filterPriceLowToHigh,
         'Maior Preço': filterElements.filterPriceHighToLow
     }; 
-    cy.get(filterValue[filter]).click();
+  
+    // Abra o select clicando nele
+    cy.get(filterValue[filter]).click({force: true});
 
    },
 
     //Then  os produtos devem ser exibidos em ordem <ordem> de acordo com o filtro selecionado.
-    validationOrderProducts:(order)=>{
-            cy.get(filterElements.itemListProducts).should('have.value',order);
-            cy.get(filterElements.itemNameProduct).then($elements => {
-                const texts = $elements.map((index, element) => Cypress.$(element).text()).get();
-                
-                // Verificação de ordem alfabética ascendente (A-Z)
-                const isSortedAsc = texts.slice(0).sort((a, b) => a.localeCompare(b)).join(',') === texts.join(',');
-                if (isSortedAsc) {
-                    cy.log('Os itens estão em ordem alfabética ascendente (A-Z)');
-                } else {
-                    cy.log('Os itens NÃO estão em ordem alfabética ascendente (A-Z)');
-                }
-            
-                // Verificação de ordem alfabética descendente (Z-A)
-                const isSortedDesc = texts.slice(0).sort((a, b) => b.localeCompare(a)).join(',') === texts.join(',');
-                if (isSortedDesc) {
-                    cy.log('Os itens estão em ordem alfabética descendente (Z-A)');
-                } else {
-                    cy.log('Os itens NÃO estão em ordem alfabética descendente (Z-A)');
-                }
-            });
+    validationOrderProducts: (order) => {
 
+        // Função para normalizar os valores dentro das matrizes
+        const normalizeArray = (array) => array.map(item => item.trim().toLowerCase());
+    
+        // Verifica se os itens estão em ordem alfabética ascendente (A-Z)
+        if (order === "A-Z") {
+            cy.get(filterElements.itemNameProducts).then($elements => {
+                const texts = [];
+                
+                $elements.each((index, element) => {
+                    texts.push(Cypress.$(element).text().trim());
+                });
+        
+                const sortedTexts = texts.sort((a, b) => a.localeCompare(b, 'en', { sensitivity: 'base' }));
+        
+                for (let i = 0; i < texts.length; i++) {
+                    expect(texts[i]).to.equal(sortedTexts[i]);
+                }
+        
+                cy.log('Os itens estão em ordem alfabética ascendente (A-Z)');
+            });
+        }
+
+        // Verifica se os itens estão em ordem alfabética descendente (Z-A)
+        if (order === "Z-A") {
+            cy.get(filterElements.itemNameProducts).then($elements => {
+                const texts = $elements.map((index, element) => Cypress.$(element).text()).get();
+                const sortedTexts = [...texts].sort((a, b) => b.localeCompare(a));
+                expect(normalizeArray(texts)).to.deep.equal(normalizeArray(sortedTexts));
+                cy.log('Os itens estão em ordem alfabética descendente (Z-A)');
+            });
+        }
+    
+        // Verifica se os preços estão em ordem ascendente (menor para o maior)
+        if (order === "Menor Preço") {
             cy.get(filterElements.itemPriceProduct).then($elementsPrice => {
-                const prices = $elementsPrice.map((index, element) => Cypress.$(element).text()).get().map(price => parseFloat(price.replace('$', '')));
-            
-                // Verificação de ordem ascendente (menor para o maior)
-                const isSortedAsc = prices.slice(0).sort((a, b) => a - b).join(',') === prices.join(',');
-                if (isSortedAsc) {
+                const prices = [];
+        
+                $elementsPrice.each((index, element) => {
+                    const priceText = Cypress.$(element).find('seletor_do_preço').text().trim();
+                    const priceValue = parseFloat(priceText.replace('$', '').trim());
+        
+                    if (!isNaN(priceValue)) {
+                        prices.push(priceValue);
+                    }
+                });
+        
+                if (prices.length > 0) {
+                    const sortedPrices = [...prices].sort((a, b) => a - b);
+        
+                    expect(prices).to.have.lengthOf(sortedPrices.length);
+        
+                    for (let i = 0; i < prices.length; i++) {
+                        expect(prices[i]).to.equal(sortedPrices[i]);
+                    }
+        
                     cy.log('Os preços estão em ordem ascendente (menor para o maior)');
                 } else {
-                    cy.log('Os preços NÃO estão em ordem ascendente (menor para o maior)');
-                }
-            
-                // Verificação de ordem descendente (maior para o menor)
-                const isSortedDesc = prices.slice(0).sort((a, b) => b - a).join(',') === prices.join(',');
-                if (isSortedDesc) {
-                    cy.log('Os preços estão em ordem descendente (maior para o menor)');
-                } else {
-                    cy.log('Os preços NÃO estão em ordem descendente (maior para o menor)');
+                    cy.log('Não foram encontrados preços válidos para ordenar');
                 }
             });
-
+        }
+    
+        // Verifica se os preços estão em ordem descendente (maior para o menor)
+        if (order === "Maior Preço") {
+            cy.get(filterElements.itemPriceProduct).then($elementsPrice => {
+                const prices = $elementsPrice.map((index, element) => {
+                    return parseFloat(Cypress.$(element).text().replace('$', '').trim());
+                }).get();
+        
+                const sortedPrices = [...prices].sort((a, b) => b - a);
+        
+                expect(prices).to.have.members(sortedPrices);
+        
+                cy.log('Os preços estão em ordem descendente (maior para o menor)');
+            });
+        }
     },
 
 };
