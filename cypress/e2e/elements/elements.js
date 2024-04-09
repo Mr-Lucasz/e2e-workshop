@@ -21,3 +21,13 @@ msgError: '[data-test=error]',
 
 
 };
+
+
+export const filterElemnts = {
+    
+    selectFilter: '[data-test = product-sort-container]',
+    filterAz: '[data-test = product-sort-container]>option:nth-child(1)',
+    filterZa: '[data-test = product-sort-container]>option:nth-child(2)',
+    filterPriceLowToHigh: '[data-test = product-sort-container]>option:nth-child(3)',
+    filterPriceHighToLow: '[data-test = product-sort-container]>option:nth-child(4)',
+};
