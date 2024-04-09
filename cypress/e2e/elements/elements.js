@@ -30,16 +30,14 @@ export const filterElements = {
     filterZa: '[data-test = product-sort-container]>option:nth-child(2)',
     filterPriceLowToHigh: '[data-test = product-sort-container]>option:nth-child(3)',
     filterPriceHighToLow: '[data-test = product-sort-container]>option:nth-child(4)',
-};
-
-export const addCartElements = {
-    buttonAdd: '[data-test="add-to-cart-sauce-labs-backpack"]',
-    cartQtd: '#shopping_cart_container > a > span'
-}
-
     listProducts: '[data-test = inventory-list]',
     itemListProducts: '[data-test=inventory-item]',
     itemListProducts: '[data-test=inventory-item-name]',
     itemNameProduct4: '[data-test=item-4-title-link]',
     itemPriceProduct: '[date-test=inventory-item-price]'
+};
+
+export const addCartElements = {
+    buttonAdd: '[data-test="add-to-cart-sauce-labs-backpack"]',
+    cartQtd: '#shopping_cart_container > a > span'
 };

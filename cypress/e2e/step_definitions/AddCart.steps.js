@@ -1,10 +1,14 @@
 import { Given, When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import { addCartPage } from "../pageObjects/AddCart.page";
-import { commonsPage} from "../pageObjects/Commons.page";
+import { addCart } from "../pageObjects/AddCart.page";
+import { commonPage} from "../pageObjects/Commons.page";
 
 Given("que estou na página de um produto", () => {
-    commonsPage.login();
-});g
+    commonPage.login();
+});
+
+When("não há itens no meu carrinho", () => {
+    addCart.checkCartEmpty();
+});
 
 
 // Feature: Adição de Item ao Carrinho
