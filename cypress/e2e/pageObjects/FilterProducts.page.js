@@ -27,7 +27,6 @@ filterProducts = {
     // Função para normalizar os valores dentro das matrizes
     const normalizeArray = (array) =>
       array.map((item) => item.trim().toLowerCase());
-
     // Verifica se os itens estão em ordem alfabética ascendente (A-Z)
     if (order === "A-Z") {
       cy.get(filterElements.itemNameProducts).then(($elements) => {
