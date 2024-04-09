@@ -9,9 +9,10 @@ Given("estou na página de listagem de produtos.", () => {
 
 When("seleciono a opção de filtrar produtos por {string}.", (filtro) => {
     filterProducts.validationFilters(filtro);
-    cy.log(filtro);
+    console.log(filtro);
 });
 
 Then("os produtos devem ser exibidos em ordem {string} de acordo com o filtro selecionado.", (ordem) => {
     filterProducts.validationOrderProducts(ordem);
+    console.log(ordem);
 });
