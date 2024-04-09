@@ -23,11 +23,16 @@ msgError: '[data-test=error]',
 };
 
 
-export const filterElemnts = {
+export const filterElements = {
     
     selectFilter: '[data-test = product-sort-container]',
     filterAz: '[data-test = product-sort-container]>option:nth-child(1)',
     filterZa: '[data-test = product-sort-container]>option:nth-child(2)',
     filterPriceLowToHigh: '[data-test = product-sort-container]>option:nth-child(3)',
     filterPriceHighToLow: '[data-test = product-sort-container]>option:nth-child(4)',
+    listProducts: '[data-test = inventory-list]',
+    itemListProducts: '[data-test=inventory-item]',
+    itemListProducts: '[data-test=inventory-item-name]',
+    itemNameProduct4: '[data-test=item-4-title-link]',
+    itemPriceProduct: '[date-test=inventory-item-price]'
 };
