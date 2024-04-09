@@ -16,4 +16,5 @@ Feature: Login no sistema
                 Then eu devo ver uma mensagem de erro de "Epic sadface: Username is required"
                 When eu não preencho o campo de senha permaneço na página de login
                 Then eu devo ver uma mensagem de erro de "Epic sadface: Password is required"
-        
+
+
