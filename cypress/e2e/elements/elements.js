@@ -36,3 +36,10 @@ export const filterElements = {
     itemNameProduct4: '[data-test=item-4-title-link]',
     itemPriceProduct: '[data-test=inventory-item-price]'
 };
+
+export const addCartElements = {
+    buttonAdd: '[data-test="add-to-cart-sauce-labs-backpack"]',
+    cartQtd: '#shopping_cart_container > a > span'
+}
+
+    
