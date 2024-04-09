@@ -8,7 +8,7 @@ import { loginPageApi} from "../pageObjects/LoginApi.page";
 // When eu faço uma requisição para a API de login
 // Then a API deve me retornar um token de autenticação]
 
-Given("que eu tenha um usuário cadastrado", () => {
+Given("que o usuário está na página de loginApi", () => {
     loginPageApi.accessPage();
   });
 
