@@ -31,3 +31,8 @@ export const filterElemnts = {
     filterPriceLowToHigh: '[data-test = product-sort-container]>option:nth-child(3)',
     filterPriceHighToLow: '[data-test = product-sort-container]>option:nth-child(4)',
 };
+
+export const addCartElements = {
+    buttonAdd: '[data-test="add-to-cart-sauce-labs-backpack"]',
+    cartQtd: '#shopping_cart_container > a > span'
+}
