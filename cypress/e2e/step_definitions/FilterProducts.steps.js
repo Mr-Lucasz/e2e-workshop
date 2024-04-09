@@ -7,30 +7,10 @@ Given("estou na página de listagem de produtos.", () => {
     filterProducts.validationPageProducts();
 });
 
-When("seleciono a opção de filtrar produtos por A-Z.", () => {
-    filterProducts.valdiationFilters("A-Z");
-});
-When("seleciono a opção de filtrar produtos por Z-A.", () => {
-    filterProducts.valdiationFilters("A-Z");
-});
-When("seleciono a opção de filtrar produtos por Menor Preço.", () => {
-    filterProducts.valdiationFilters("Menor Preço");
-});
-When("seleciono a opção de filtrar produtos por Maior Preço.", () => {
-    filterProducts.valdiationFilters("Maior Preço");
+When("seleciono a opção de filtrar produtos por {string}.", (filtro) => {
+    filterProducts.validationFilters(filtro);
 });
 
-Then("os produtos devem ser exibidos em ordem A-Z de acordo com o filtro selecionado.", () => {
-    filterProducts.validationOrderProducts("A-Z");
+Then("os produtos devem ser exibidos em ordem {string} de acordo com o filtro selecionado.", (ordem) => {
+    filterProducts.validationOrderProducts(ordem);
 });
-Then("os produtos devem ser exibidos em ordem Z-A de acordo com o filtro selecionado.", () => {
-    filterProducts.validationOrderProducts("Z-A");
-});
-Then("os produtos devem ser exibidos em ordem Menor Preço de acordo com o filtro selecionado.", () => {
-    filterProducts.validationOrderProducts("Menor Preço");
-});
-Then("os produtos devem ser exibidos em ordem Maior Preço de acordo com o filtro selecionado.", () => {
-    filterProducts.validationOrderProducts("Maior Preço");
-});
-
-

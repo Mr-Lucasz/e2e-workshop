@@ -30,9 +30,9 @@ export const filterElements = {
     "[data-test = product-sort-container]>option:nth-child(4)",
   listProducts: "[data-test = inventory-list]",
   itemListProducts: "[data-test=inventory-item]",
-//   itemListProducts: "[data-test=inventory-item-name]",
+  itemNameProducts: "[data-test=inventory-item-name]",
   itemNameProduct4: "[data-test=item-4-title-link]",
-  itemPriceProduct: "[date-test=inventory-item-price]",
+  itemPriceProduct: "[data-test=inventory-item-price]",
 };
 
 export const addCartElements = {
