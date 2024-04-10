@@ -1,5 +1,7 @@
 //pagesObjects/Login.page.js
 import { loginElements } from "../elements/elements.js";
+//importando json fixture
+import dashboardResponse from "../../fixtures/dashboardResponse.json";
 
 const loginPageApi = {
   //Scenario: Teste de API Login
@@ -31,23 +33,23 @@ const loginPageApi = {
       //check response body
       let token = new URLSearchParams(interception.request.body).get("_token");
       expect(token).to.not.be.null;
-    }
-    );
+    });
   },
 
   //response body: {"data":[{"id":4,"group":"Pending Self Reviews","pendingActionCount":1},{"id":5,"group":"Candidates To Interview","pendingActionCount":1}],"meta":[],"rels":[]}
   redirectHome: () => {
     cy.intercept(
-      "GET",
-      "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary"
-    ).as("home");
-    cy.wait("@home").then((interception) => {
+      {
+        method: "GET",
+        url: "https://opensource-demo.orangehrmlive.com/web/index.php/api/v2/dashboard/employees/action-summary",
+      },
+      { fixture: "dashboardResponse.json" }
+    ).as("getDashboard");
+    cy.wait("@getDashboard").then((interception) => {
       expect(interception.response.statusCode).to.eq(200);
-      //check response body
       expect(interception.response.body).to.have.property("data");
       expect(interception.response.body).to.have.property("meta");
       expect(interception.response.body).to.have.property("rels");
-
     });
   },
 };
