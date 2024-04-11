@@ -1,14 +1,11 @@
-// Importando os pacotes necessários
-const { defineConfig } = require("cypress");
-const createBundler = require("@bahmutov/cypress-esbuild-preprocessor");
-const preprocessor = require("@badeball/cypress-cucumber-preprocessor");
-const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild");
-const fs = require("fs-extra");
-const path = require("path");
+const path = require('path');
+const fs = require('fs-extra');
+const preprocessor = require('cypress-cucumber-preprocessor');
+const createBundler = require('@bahmutov/cypress-esbuild-preprocessor');
+const createEsbuildPlugin = require('@bahmutov/cypress-esbuild-preprocessor/esbuildPlugin');
 
 function getConfigurationByFile(file) {
-  const pathToConfigFile = path.resolve("cypress", "config", `${file}.json`);
-  return fs.readJson(pathToConfigFile);
+  return fs.readJson(path.resolve("cypress", "config", `${file}.json`));
 }
 
 async function setupNodeEvents(on, config) {
@@ -16,18 +13,13 @@ async function setupNodeEvents(on, config) {
   const envConfig = await getConfigurationByFile(file);
 
   config.baseUrl = envConfig.baseUrl;
-  //o arquivo de configuração seja acessível em qualquer lugar do código
-  config.env = Object.assign(config.env, envConfig);
+  config.env = { ...config.env, ...envConfig };
 
   await preprocessor.addCucumberPreprocessorPlugin(on, config);
 
-  // Definindo o preprocessor para usar o esbuild
-  on(
-    "file:preprocessor",
-    createBundler({
-      plugins: [createEsbuildPlugin.default(config)],
-    })
-  );
+  on("file:preprocessor", createBundler({
+    plugins: [createEsbuildPlugin.default(config)],
+  }));
 
   return config;
 }
