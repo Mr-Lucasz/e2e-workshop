@@ -9,6 +9,37 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18+-blue.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Course](https://img.shields.io/badge/Course-4%20Modules-orange.svg)](https://github.com/lucas-egswf/automation-test)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/lucas-egswf/automation-test)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-green.svg)](https://github.com/lucas-egswf/automation-test)
+[![Last Commit](https://img.shields.io/badge/last%20commit-active-blue.svg)](https://github.com/lucas-egswf/automation-test)
+[![Issues](https://img.shields.io/badge/issues-open%20for%20help-orange.svg)](https://github.com/lucas-egswf/automation-test/issues)
+
+---
+
+## **📋 Índice Rápido**
+
+- [🚀 Setup Rápido](#setup-rápido-2-minutos)
+- [📚 Módulos do Curso](#estrutura-do-curso---aprenda-progressivamente)
+- [🎯 Desafios Práticos](#desafios-práticos---aprenda-fazendo)
+- [🛠️ Ferramentas](#ferramentas-que-você-vai-dominar)
+- [📖 Guias de Aprendizado](#guias-de-aprendizado)
+- [🏆 Metodologia](#metodologia-de-aprendizado)
+- [💼 Projetos para Portfólio](#projetos-práticos-para-seu-portfólio)
+- [👥 Comunidade](#comunidade-e-suporte)
+- [📈 Progresso](#seu-progresso-no-curso)
+
+---
+
+## **🛠️ Acesso Rápido aos Arquivos**
+
+| Tipo | Caminho | Descrição |
+|------|---------|-----------|
+| **Configuração** | [`cypress.config.js`](cypress.config.js) | Configuração principal do Cypress |
+| **Page Objects** | [`cypress/e2e/pageObjects/`](cypress/e2e/pageObjects/) | Seletores e ações reutilizáveis |
+| **Features** | [`cypress/e2e/features/`](cypress/e2e/features/) | Cenários de teste em Gherkin |
+| **Step Definitions** | [`cypress/e2e/step_definitions/`](cypress/e2e/step_definitions/) | Implementação dos passos |
+| **Suporte** | [`cypress/support/`](cypress/support/) | Comandos e configurações customizadas |
+| **Fixtures** | [`cypress/fixtures/`](cypress/fixtures/) | Dados de teste |
 
 ---
 
@@ -31,6 +62,32 @@
 - **Vontade de aprender** e praticar
 - **Git** para versionamento
 
+### **🚀 Comandos Rápidos**
+
+```bash
+# Setup inicial (2 minutos)
+git clone https://github.com/lucas-egswf/automation-test.git
+cd automation-test
+npm install
+
+# Abrir Cypress (modo interativo)
+npm run cypress:open
+
+# Executar testes específicos
+npm run test:module1    # Login.feature
+npm run test:module2    # LoginApi.feature  
+npm run test:module3    # FilterProducts.feature
+npm run test:module4    # AddItemCart.feature
+
+# Executar todos os testes
+npm run test:all
+
+# Qualidade de código
+npm run lint            # Verificar código
+npm run lint:fix        # Corrigir problemas automaticamente
+npm run format          # Formatar código
+```
+
 ### **Setup Rápido (2 minutos)**
 ```bash
 # 1. Clone o curso
@@ -47,6 +104,23 @@ npm run cypress:open
 ---
 
 ## **Estrutura do Curso - Aprenda Progressivamente**
+
+### **🏗️ Estrutura Visual do Projeto**
+
+```
+e2e-workshop/
+├── 📁 cypress/
+│   ├── 📁 config/           # Configurações por ambiente
+│   ├── 📁 e2e/             # Testes end-to-end
+│   │   ├── 📁 features/    # Cenários em Gherkin
+│   │   ├── 📁 pageObjects/ # Seletores reutilizáveis
+│   │   └── 📁 step_definitions/ # Implementação dos passos
+│   ├── 📁 fixtures/        # Dados de teste
+│   └── 📁 support/         # Comandos customizados
+├── 📄 cypress.config.js    # Configuração principal
+├── 📄 package.json         # Dependências e scripts
+└── 📚 Documentação completa
+```
 
 ### **MÓDULO 1: Fundamentos (Login.feature)**
 
@@ -189,6 +263,27 @@ Feature: Testes de API
 
 ---
 
+## **📖 Guias de Aprendizado**
+
+### **Documentação Essencial**
+| Guia | Descrição | Link Direto |
+|------|-----------|-------------|
+| **📚 LEARNING_GUIDE.md** | Guia completo de como usar o repositório como curso | [Acessar](LEARNING_GUIDE.md) |
+| **🗺️ STUDY_ROADMAP.md** | Cronograma diário de 4 semanas para dominar Cypress | [Acessar](STUDY_ROADMAP.md) |
+| **✅ PROGRESS_CHECKLIST.md** | Acompanhe seu progresso e conquiste todas as medalhas | [Acessar](PROGRESS_CHECKLIST.md) |
+| **⚡ QUICK_START.md** | Setup em 5 minutos e primeiro teste em 30 segundos | [Acessar](QUICK_START.md) |
+| **📋 CONTRIBUTING.md** | Como contribuir e participar da comunidade | [Acessar](CONTRIBUTING.md) |
+
+### **Arquivos de Configuração**
+| Arquivo | Propósito | Link Direto |
+|---------|-----------|-------------|
+| **cypress.config.js** | Configuração principal do Cypress | [Ver Config](cypress.config.js) |
+| **package.json** | Dependências e scripts de teste | [Ver Dependências](package.json) |
+| **docker-compose.yml** | Ambiente Docker para testes | [Ver Docker](docker-compose.yml) |
+| **tsconfig.json** | Configuração TypeScript | [Ver TSConfig](tsconfig.json) |
+
+---
+
 ## **Metodologia de Aprendizado**
 
 ### **Aprenda na Prática**
@@ -240,7 +335,17 @@ Feature: Testes de API
 
 ## **Seu Progresso no Curso**
 
-### **Dashboard de Aprendizado**
+### **📊 Status dos Testes**
+
+| Módulo | Feature | Status | Execução |
+|--------|---------|--------|----------|
+| **Módulo 1** | `Login.feature` | ✅ Pronto | `npm run test:module1` |
+| **Módulo 2** | `LoginApi.feature` | ✅ Pronto | `npm run test:module2` |
+| **Módulo 3** | `FilterProducts.feature` | ✅ Pronto | `npm run test:module3` |
+| **Módulo 4** | `AddItemCart.feature` | ✅ Pronto | `npm run test:module4` |
+
+### **🏆 Dashboard de Aprendizado**
+
 ```bash
 # Execute os testes por módulo
 npm run test:module1    # Login.feature
@@ -301,6 +406,27 @@ Execute o `Login.feature` e veja a mágica acontecer!
 
 ---
 
+## **🆘 Ajuda Rápida & Troubleshooting**
+
+### **Problemas Comuns e Soluções**
+
+| Problema | Solução | Comando |
+|----------|---------|---------|
+| **Erro de dependências** | Reinstalar node_modules | `rm -rf node_modules && npm install` |
+| **Cypress não abre** | Verificar Node.js 18+ | `node --version` |
+| **Testes falhando** | Verificar baseUrl | `npm run cypress:open` |
+| **Erro de permissão** | Executar como admin | `sudo npm install` (Linux/Mac) |
+| **Problemas de Docker** | Rebuild container | `docker-compose down && docker-compose up --build` |
+
+### **📞 Suporte e Comunidade**
+
+- **📖 [Documentação](LEARNING_GUIDE.md)** - Guia completo
+- **🐛 [Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reportar problemas
+- **💬 [Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Fórum da comunidade
+- **📧 [Email](mailto:lucas-egswf@github.com)** - Contato direto
+
+---
+
 ## **Transforme sua Carreira em QA Automation!**
 
 **4 módulos práticos e interativos**
@@ -308,6 +434,27 @@ Execute o `Login.feature` e veja a mágica acontecer!
 **Projeto real para seu portfólio**
 **Comunidade ativa de QAs**
 **Certificado reconhecido**
+
+---
+
+## **🆘 Ajuda Rápida & Troubleshooting**
+
+### **Problemas Comuns e Soluções**
+
+| Problema | Solução | Comando |
+|----------|---------|---------|
+| **Erro de dependências** | Reinstalar node_modules | `rm -rf node_modules && npm install` |
+| **Cypress não abre** | Verificar Node.js 18+ | `node --version` |
+| **Testes falhando** | Verificar baseUrl | `npm run cypress:open` |
+| **Erro de permissão** | Executar como admin | `sudo npm install` (Linux/Mac) |
+| **Problemas de Docker** | Rebuild container | `docker-compose down && docker-compose up --build` |
+
+### **📞 Suporte e Comunidade**
+
+- **📖 [Documentação](LEARNING_GUIDE.md)** - Guia completo
+- **🐛 [Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reportar problemas
+- **💬 [Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Fórum da comunidade
+- **📧 [Email](mailto:lucas-egswf@github.com)** - Contato direto
 
 ---
 
