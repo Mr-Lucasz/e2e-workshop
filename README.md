@@ -9,10 +9,12 @@
 [![Node.js](https://img.shields.io/badge/Node.js-18+-blue.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Course](https://img.shields.io/badge/Course-4%20Modules-orange.svg)](https://github.com/lucas-egswf/automation-test)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/lucas-egswf/automation-test)
+[![CI/CD](https://github.com/lucas-egswf/automation-test/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/lucas-egswf/automation-test/actions)
 [![Test Coverage](https://img.shields.io/badge/coverage-95%25-green.svg)](https://github.com/lucas-egswf/automation-test)
-[![Last Commit](https://img.shields.io/badge/last%20commit-active-blue.svg)](https://github.com/lucas-egswf/automation-test)
-[![Issues](https://img.shields.io/badge/issues-open%20for%20help-orange.svg)](https://github.com/lucas-egswf/automation-test/issues)
+[![Last Commit](https://img.shields.io/github/last-commit/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
+[![Open Issues](https://img.shields.io/github/issues/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
+[![GitHub Forks](https://img.shields.io/github/forks/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
 
 ---
 

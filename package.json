@@ -20,20 +20,28 @@
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "report:generate": "mochawesome-merge cypress/results/*.json > cypress/results/merged-report.json && marge cypress/results/merged-report.json -o cypress/reports",
+    "report:open": "open cypress/reports/index.html",
+    "metrics:show": "node -e \"const metrics = require('./cypress/results/metrics.json'); console.log('📊 Test Metrics:', JSON.stringify(metrics, null, 2));\"",
+    "coverage:badge": "node scripts/generate-coverage-badge.js",
+    "cleanup": "node scripts/cleanup.js"
   },
   "author": "lucas-egswf",
   "license": "MIT",
   "devDependencies": {
     "@bahmutov/cypress-esbuild-preprocessor": "^2.2.0",
     "cypress": "^13.7.1",
-    "cypress-xpath": "^2.0.1",
     "esbuild": "^0.25.9",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "eslint-plugin-cypress": "^2.15.1",
     "prettier": "^3.2.5",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.2"
+    "lint-staged": "^15.2.2",
+    "cypress-multi-reporters": "^1.6.3",
+    "mochawesome": "^7.1.3",
+    "mochawesome-merge": "^4.2.2",
+    "mochawesome-report-generator": "^6.2.0"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.2"
