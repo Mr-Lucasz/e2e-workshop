@@ -1,0 +1,180 @@
+name: 🧪 Cypress E2E Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+  schedule:
+    # Executa testes diariamente às 2h da manhã UTC
+    - cron: '0 2 * * *'
+
+jobs:
+  cypress-run:
+    name: 🚀 Cypress E2E Tests
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        # Teste em múltiplos browsers
+        browser: [chrome, firefox, edge]
+        # Teste em diferentes viewports
+        viewport: [desktop, tablet, mobile]
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 📋 Install dependencies
+        run: npm ci
+        
+      - name: 🔧 Cypress cache
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/Cypress
+          key: cypress-cache-${{ runner.os }}-${{ matrix.browser }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            cypress-cache-${{ runner.os }}-${{ matrix.browser }}-
+            cypress-cache-${{ runner.os }}-
+            
+      - name: 🧪 Run Cypress tests
+        uses: cypress-io/github-action@v6
+        with:
+          browser: ${{ matrix.browser }}
+          viewport: ${{ matrix.viewport }}
+          config: baseUrl=https://www.saucedemo.com
+          env: |
+            CYPRESS_USERNAME=standard_user
+            CYPRESS_PASSWORD=secret_sauce
+          wait-on: 'https://www.saucedemo.com'
+          wait-on-timeout: 120
+          
+      - name: 📸 Upload screenshots
+        uses: actions/upload-artifact@v4
+        if: failure()
+        with:
+          name: cypress-screenshots-${{ matrix.browser }}-${{ matrix.viewport }}
+          path: cypress/screenshots/
+          
+      - name: 🎥 Upload videos
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-videos-${{ matrix.browser }}-${{ matrix.viewport }}
+          path: cypress/videos/
+          
+      - name: 📊 Upload test results
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: cypress-results-${{ matrix.browser }}-${{ matrix.viewport }}
+          path: cypress/results/
+
+  cypress-visual-regression:
+    name: 🎨 Visual Regression Tests
+    runs-on: ubuntu-latest
+    needs: cypress-run
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 📋 Install dependencies
+        run: npm ci
+        
+      - name: 🎨 Run visual regression tests
+        run: |
+          # Aqui você pode adicionar testes de regressão visual
+          # Por exemplo, usando Percy ou similar
+          echo "Visual regression tests would run here"
+          
+  security-scan:
+    name: 🔒 Security Scan
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 🔍 Run security audit
+        run: npm audit --audit-level moderate
+        
+      - name: 🔒 Check for vulnerabilities
+        run: |
+          if npm audit --audit-level high; then
+            echo "No high severity vulnerabilities found"
+          else
+            echo "High severity vulnerabilities detected"
+            exit 1
+          fi
+
+  dependency-update:
+    name: 📦 Dependency Updates
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout code
+        uses: actions/checkout@v4
+        
+      - name: 📦 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 🔄 Check for outdated packages
+        run: npm outdated
+        
+      - name: 📋 Generate dependency report
+        run: |
+          npm list --depth=0 > dependency-report.txt
+          echo "Dependency report generated"
+          
+      - name: 📤 Upload dependency report
+        uses: actions/upload-artifact@v4
+        with:
+          name: dependency-report
+          path: dependency-report.txt
+
+  notify:
+    name: 📢 Notify Results
+    runs-on: ubuntu-latest
+    needs: [cypress-run, cypress-visual-regression, security-scan]
+    if: always()
+    
+    steps:
+      - name: 📊 Test Results Summary
+        run: |
+          echo "## 🧪 Test Execution Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "| Job | Status | Details |" >> $GITHUB_STEP_SUMMARY
+          echo "|-----|--------|---------|" >> $GITHUB_STEP_SUMMARY
+          echo "| Cypress Tests | ${{ needs.cypress-run.result }} | [View Details](${{ needs.cypress-run.outputs.url }}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Visual Regression | ${{ needs.cypress-visual-regression.result }} | [View Details](${{ needs.cypress-visual-regression.outputs.url }}) |" >> $GITHUB_STEP_SUMMARY
+          echo "| Security Scan | ${{ needs.security-scan.result }} | [View Details](${{ needs.security-scan.outputs.url }}) |" >> $GITHUB_STEP_SUMMARY
+          
+      - name: 🎉 Success Notification
+        if: success()
+        run: |
+          echo "✅ All tests passed successfully!"
+          echo "🚀 Ready for deployment"
+          
+      - name: ⚠️ Failure Notification
+        if: failure()
+        run: |
+          echo "❌ Some tests failed"
+          echo "🔍 Check the logs for details"
+          echo "📸 Screenshots and videos uploaded as artifacts"

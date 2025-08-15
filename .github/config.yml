@@ -1,0 +1,139 @@
+# Configuração do Projeto GitHub
+# Este arquivo define configurações para o repositório
+
+# Informações do Projeto
+project:
+  name: "Workshop de Automação E2E com Cypress + Cucumber"
+  description: "Workshop prático de automação de testes E2E para a comunidade de QA"
+  topics:
+    - "cypress"
+    - "cucumber"
+    - "e2e-testing"
+    - "automation"
+    - "qa"
+    - "testing"
+    - "bdd"
+    - "workshop"
+    - "javascript"
+    - "nodejs"
+
+# Configurações de Issues
+issues:
+  # Labels padrão para issues
+  default_labels:
+    - "needs-triage"
+  
+  # Templates disponíveis
+  templates:
+    - "bug-report"
+    - "feature-request"
+    - "question"
+
+# Configurações de Pull Requests
+pull_requests:
+  # Template padrão
+  template: ".github/PULL_REQUEST_TEMPLATE.md"
+  
+  # Revisores padrão
+  default_reviewers:
+    - "lucas-egswf"
+
+# Configurações de Branches
+branches:
+  # Branch padrão
+  default: "main"
+  
+  # Branches protegidas
+  protected:
+    - "main"
+    - "develop"
+  
+  # Regras para branches protegidas
+  rules:
+    main:
+      required_status_checks:
+        strict: true
+        contexts:
+          - "🧪 Cypress E2E Tests"
+      required_pull_request_reviews:
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+      enforce_admins: false
+      restrictions: null
+
+# Configurações de CI/CD
+ci:
+  # Workflows disponíveis
+  workflows:
+    - "ci.yml"
+  
+  # Status checks obrigatórios
+  required_checks:
+    - "🧪 Cypress E2E Tests"
+    - "🔒 Security Scan"
+
+# Configurações de Comunidade
+community:
+  # Código de conduta
+  code_of_conduct: "CODE_OF_CONDUCT.md"
+  
+  # Guia de contribuição
+  contributing: "CONTRIBUTING.md"
+  
+  # Licença
+  license: "MIT"
+  
+  # Arquivo de suporte
+  support: "SUPPORT.md"
+
+# Configurações de Segurança
+security:
+  # Política de segurança
+  policy: "SECURITY.md"
+  
+  # Relatórios de vulnerabilidades
+  advisories: true
+  
+  # Dependabot
+  dependabot:
+    enabled: true
+    schedule: "weekly"
+    open_pr_limit: 10
+
+# Configurações de Wikis
+wiki:
+  enabled: false
+
+# Configurações de Projetos
+projects:
+  enabled: true
+  
+  # Templates de projeto
+  templates:
+    - "Automation Test Suite"
+    - "Feature Development"
+    - "Bug Triage"
+
+# Configurações de Discussions
+discussions:
+  enabled: true
+  
+  # Categorias disponíveis
+  categories:
+    - "General"
+    - "Q&A"
+    - "Show and Tell"
+    - "Ideas"
+    - "Announcements"
+
+# Configurações de Pages
+pages:
+  enabled: false
+
+# Configurações de Sponsors
+sponsors:
+  enabled: false
+
+# Configurações de Packages
+packages:
+  enabled: false
