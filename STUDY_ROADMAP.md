@@ -1,21 +1,21 @@
-# 🗺️ **Roteiro de Estudos - Curso de Automação E2E**
+# **Roteiro de Estudos - Curso de Automação E2E**
 
-> **📚 Um guia passo a passo para sua jornada de aprendizado**
+> **Um guia passo a passo para sua jornada de aprendizado** 
 > 
 > **Transforme-se em um QA Automation Expert seguindo este roteiro estruturado!**
 
 ---
 
-## 🎯 **Visão Geral do Curso**
+## **Visão Geral do Curso**
 
-### **📊 Estatísticas do Curso**
+### **Estatísticas do Curso**
 - **Duração:** 4 semanas (28 dias)
 - **Módulos:** 4 módulos progressivos
 - **Horas por dia:** 1-2 horas
 - **Total de horas:** 56-84 horas
 - **Nível:** Iniciante → Avançado
 
-### **🏆 Certificações ao Longo do Curso**
+### **Certificações ao Longo do Curso**
 - **🥉 Bronze:** Fundamentos (Semana 1)
 - **🥈 Prata:** APIs e Interações (Semana 2)
 - **🥇 Ouro:** Fluxos Complexos (Semana 3)
@@ -23,21 +23,21 @@
 
 ---
 
-## 📅 **SEMANA 1: Fundamentos do Cypress**
+## **SEMANA 1: Fundamentos do Cypress**
 
-### **🎯 Objetivos da Semana**
+### **Objetivos da Semana**
 - Entender a estrutura básica do Cypress
 - Aprender comandos fundamentais
 - Executar seu primeiro teste automatizado
 - Compreender assertions e validações
 
-### **📚 Recursos de Estudo**
+### **Recursos de Estudo**
 - **Feature:** `Login.feature`
 - **Steps:** `Login.steps.js`
 - **Page Object:** `Login.page.js`
 - **Documentação:** [Cypress Docs](https://docs.cypress.io/)
 
-### **📋 Cronograma Diário**
+### **Cronograma Diário**
 
 #### **Dia 1: Introdução ao Cypress**
 - [ ] **Teoria (30 min):** O que é Cypress e por que usar
@@ -79,25 +79,25 @@
 - [ ] **Revisão (30 min):** Conceitos aprendidos na semana
 - [ ] **Projeto (45 min):** Crie um teste completo de cadastro
 - [ ] **Avaliação (15 min):** Teste seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Bronze conquistada!
+- [ ] **Conquista:** Medalha de Bronze conquistada!
 
 ---
 
-## 📅 **SEMANA 2: Testes de API**
+## **SEMANA 2: Testes de API**
 
-### **🎯 Objetivos da Semana**
+### **Objetivos da Semana**
 - Compreender como testar APIs com Cypress
 - Implementar testes de integração backend
 - Validar diferentes tipos de respostas HTTP
 - Tratar cenários de erro e timeout
 
-### **📚 Recursos de Estudo**
+### **Recursos de Estudo**
 - **Feature:** `LoginApi.feature`
 - **Steps:** `LoginApi.steps.js`
 - **Page Object:** `LoginApi.page.js`
 - **Documentação:** [Cypress API Testing](https://docs.cypress.io/api/commands/request)
 
-### **📋 Cronograma Diário**
+### **Cronograma Diário**
 
 #### **Dia 8: Introdução aos Testes de API**
 - [ ] **Teoria (30 min):** Por que testar APIs?
@@ -139,25 +139,25 @@
 - [ ] **Revisão (30 min):** Conceitos de API testing
 - [ ] **Projeto (45 min):** Crie suite completa de testes de API
 - [ ] **Avaliação (15 min):** Teste seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Prata conquistada!
+- [ ] **Conquista:** Medalha de Prata conquistada!
 
 ---
 
-## 📅 **SEMANA 3: Interação e Validações**
+## **SEMANA 3: Interação e Validações**
 
-### **🎯 Objetivos da Semana**
+### **Objetivos da Semana**
 - Interagir com elementos dinâmicos
 - Implementar testes de funcionalidades complexas
 - Validar resultados de operações de busca
 - Praticar assertions avançadas
 
-### **📚 Recursos de Estudo**
+### **Recursos de Estudo**
 - **Feature:** `FilterProducts.feature`
 - **Steps:** `FilterProducts.steps.js`
 - **Page Object:** `FilterProducts.page.js`
 - **Documentação:** [Cypress Interactions](https://docs.cypress.io/guides/core-concepts/interacting-with-elements)
 
-### **📋 Cronograma Diário**
+### **Cronograma Diário**
 
 #### **Dia 15: Elementos Dinâmicos**
 - [ ] **Teoria (30 min):** Tipos de elementos dinâmicos
@@ -199,25 +199,25 @@
 - [ ] **Revisão (30 min):** Conceitos de interação e validação
 - [ ] **Projeto (45 min):** Suite completa de testes de filtros
 - [ ] **Avaliação (15 min):** Teste seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Prata avançada conquistada!
+- [ ] **Conquista:** Medalha de Prata avançada conquistada!
 
 ---
 
-## 📅 **SEMANA 4: Fluxos Complexos e Page Objects**
+## **SEMANA 4: Fluxos Complexos e Page Objects**
 
-### **🎯 Objetivos da Semana**
+### **Objetivos da Semana**
 - Compreender Page Object Model
 - Implementar fluxos de negócio complexos
 - Organizar código de forma profissional
 - Integrar diferentes funcionalidades
 
-### **📚 Recursos de Estudo**
+### **Recursos de Estudo**
 - **Feature:** `AddItemCart.feature`
 - **Steps:** `AddCart.steps.js`
 - **Page Object:** `AddCart.page.js`
 - **Documentação:** [Page Object Model](https://docs.cypress.io/guides/redux)
 
-### **📋 Cronograma Diário**
+### **Cronograma Diário**
 
 #### **Dia 22: Introdução ao Page Object Model**
 - [ ] **Teoria (30 min):** O que é POM e por que usar
@@ -259,13 +259,13 @@
 - [ ] **Revisão (30 min):** Todo o conteúdo do curso
 - [ ] **Projeto Final (45 min):** Aplicação completa de e-commerce
 - [ ] **Avaliação (15 min):** Teste final de conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Ouro e certificação conquistadas!
+- [ ] **Conquista:** Medalha de Ouro e certificação conquistadas!
 
 ---
 
-## 🎯 **Sistema de Avaliação**
+## **Sistema de Avaliação**
 
-### **📊 Critérios de Conquista**
+### **Critérios de Conquista**
 
 #### **🥉 Bronze (Semana 1)**
 - [ ] Execute todos os testes do Módulo 1
@@ -293,15 +293,15 @@
 
 ---
 
-## 🛠️ **Ferramentas de Apoio**
+## **Ferramentas de Apoio**
 
-### **📚 Recursos Adicionais**
+### **Recursos Adicionais**
 - **Vídeos:** Tutoriais em vídeo para cada módulo
 - **Webinars:** Sessões semanais com especialistas
 - **Challenges:** Desafios mensais com prêmios
 - **Mentoria:** Suporte individual para dúvidas
 
-### **🔍 Comandos de Progresso**
+### **Comandos de Progresso**
 ```bash
 # Verifique seu progresso
 npm run test:module1    # Módulo 1 - Fundamentos
@@ -316,16 +316,16 @@ npm run cypress:open
 
 ---
 
-## 🌟 **Dicas para Sucesso**
+## **Dicas para Sucesso**
 
-### **💡 Estratégias de Aprendizado**
+### **Estratégias de Aprendizado**
 1. **Pratique diariamente** - Mesmo que seja apenas 30 minutos
 2. **Experimente e erre** - Aprenda com seus erros
 3. **Documente seu progresso** - Mantenha um log de aprendizado
 4. **Participe da comunidade** - Compartilhe e aprenda com outros
 5. **Construa projetos pessoais** - Aplique o conhecimento em projetos reais
 
-### **🚀 Como Manter a Motivação**
+### **Como Manter a Motivação**
 - **Defina metas pequenas** - Celebre cada conquista
 - **Visualize seu progresso** - Use o sistema de medalhas
 - **Conecte-se com outros aprendizes** - Forme grupos de estudo
@@ -333,19 +333,19 @@ npm run cypress:open
 
 ---
 
-## 🎉 **Parabéns por Começar Esta Jornada!**
+## **Parabéns por Começar Esta Jornada!**
 
-**🎓 Você está no caminho para se tornar um QA Automation Expert!**
+**Você está no caminho para se tornar um QA Automation Expert!**
 
-**💻 Aprenda fazendo, experimente, erre e aprenda mais!**
+**Aprenda fazendo, experimente, erre e aprenda mais!**
 
-**🚀 A comunidade está aqui para te apoiar!**
+**A comunidade está aqui para te apoiar!**
 
 ---
 
 <div align="center">
 
-**🌟 Transforme sua carreira com automação! 🌟**
+**Transforme sua carreira com automação!**
 
 **Feito com ❤️ para a comunidade de QA**
 

@@ -1,14 +1,14 @@
-# ✅ **Checklist de Progresso - Curso de Automação E2E**
+# **Checklist de Progresso - Curso de Automação E2E**
 
-> **📊 Acompanhe seu progresso e conquiste todas as medalhas!**
+> **Acompanhe seu progresso e conquiste todas as medalhas!** 
 > 
 > **Marque cada item conforme você avança no curso.**
 
 ---
 
-## 🥉 **MEDALHA DE BRONZE - Fundamentos (Semana 1)**
+## **MEDALHA DE BRONZE - Fundamentos (Semana 1)**
 
-### **📚 Módulo 1: Fundamentos do Cypress**
+### **Módulo 1: Fundamentos do Cypress**
 
 #### **Dia 1: Introdução ao Cypress**
 - [ ] **Teoria:** Entendeu o que é Cypress e por que usar
@@ -50,13 +50,13 @@
 - [ ] **Revisão:** Revisou conceitos aprendidos na semana
 - [ ] **Projeto:** Criou um teste completo de cadastro
 - [ ] **Avaliação:** Testou seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Bronze conquistada!
+- [ ] **Conquista:** Medalha de Bronze conquistada!
 
 ---
 
-## 🥈 **MEDALHA DE PRATA - APIs e Interações (Semana 2-3)**
+## **MEDALHA DE PRATA - APIs e Interações (Semana 2-3)**
 
-### **📚 Módulo 2: Testes de API**
+### **Módulo 2: Testes de API**
 
 #### **Dia 8: Introdução aos Testes de API**
 - [ ] **Teoria:** Entendeu por que testar APIs
@@ -98,9 +98,9 @@
 - [ ] **Revisão:** Revisou conceitos de API testing
 - [ ] **Projeto:** Criou suite completa de testes de API
 - [ ] **Avaliação:** Testou seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Prata conquistada!
+- [ ] **Conquista:** Medalha de Prata conquistada!
 
-### **📚 Módulo 3: Interação e Validações**
+### **Módulo 3: Interação e Validações**
 
 #### **Dia 15: Elementos Dinâmicos**
 - [ ] **Teoria:** Aprendeu tipos de elementos dinâmicos
@@ -142,13 +142,13 @@
 - [ ] **Revisão:** Revisou conceitos de interação e validação
 - [ ] **Projeto:** Criou suite completa de testes de filtros
 - [ ] **Avaliação:** Testou seus conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Prata avançada conquistada!
+- [ ] **Conquista:** Medalha de Prata avançada conquistada!
 
 ---
 
-## 🥇 **MEDALHA DE OURO - Fluxos Complexos (Semana 4)**
+## **MEDALHA DE OURO - Fluxos Complexos (Semana 4)**
 
-### **📚 Módulo 4: Fluxos Complexos e Page Objects**
+### **Módulo 4: Fluxos Complexos e Page Objects**
 
 #### **Dia 22: Introdução ao Page Object Model**
 - [ ] **Teoria:** Entendeu o que é POM e por que usar
@@ -190,25 +190,25 @@
 - [ ] **Revisão:** Revisou todo o conteúdo do curso
 - [ ] **Projeto Final:** Criou aplicação completa de e-commerce
 - [ ] **Avaliação:** Fez teste final de conhecimentos
-- [ ] **🎉 Conquista:** Medalha de Ouro e certificação conquistadas!
+- [ ] **Conquista:** Medalha de Ouro e certificação conquistadas!
 
 ---
 
-## 💎 **MEDALHA DE DIAMANTE - Especialista**
+## **MEDALHA DE DIAMANTE - Especialista**
 
-### **🚀 Projetos Avançados**
+### **Projetos Avançados**
 - [ ] **Testes de Performance:** Implementou testes com Lighthouse
 - [ ] **Testes de Acessibilidade:** Adicionou validações de a11y
 - [ ] **Testes de Regressão Visual:** Implementou comparação de screenshots
 - [ ] **CI/CD Avançado:** Configurou pipeline completo de automação
 
-### **🔧 Tecnologias Avançadas**
+### **Tecnologias Avançadas**
 - [ ] **TypeScript:** Migrou projeto para TypeScript
 - [ ] **Relatórios HTML:** Implementou relatórios personalizados
 - [ ] **Testes Paralelos:** Configurou execução paralela de testes
 - [ ] **Docker Avançado:** Otimizou containers para CI/CD
 
-### **🤝 Contribuições para a Comunidade**
+### **Contribuições para a Comunidade**
 - [ ] **Documentação:** Melhorou documentação do projeto
 - [ ] **Mentoria:** Ajudou outros aprendizes
 - [ ] **Pull Requests:** Contribuiu com melhorias
@@ -216,21 +216,21 @@
 
 ---
 
-## 📊 **Resumo de Progresso**
+## **Resumo de Progresso**
 
-### **📈 Estatísticas Gerais**
+### **Estatísticas Gerais**
 - **Total de Dias:** 28 dias
 - **Total de Módulos:** 4 módulos
 - **Total de Desafios:** 28 desafios
 - **Total de Projetos:** 4 projetos principais
 
-### **🏆 Progresso por Medalha**
+### **Progresso por Medalha**
 - **🥉 Bronze:** ___/7 dias completos (___%)
 - **🥈 Prata:** ___/14 dias completos (___%)
 - **🥇 Ouro:** ___/7 dias completos (___%)
 - **💎 Diamante:** ___/12 itens completos (___%)
 
-### **🎯 Objetivos de Curto Prazo**
+### **Objetivos de Curto Prazo**
 - [ ] **Esta semana:** Completar Módulo 1 (Fundamentos)
 - [ ] **Próximas 2 semanas:** Completar Módulos 2 e 3 (APIs e Interações)
 - [ ] **Última semana:** Completar Módulo 4 (Fluxos Complexos)
@@ -238,16 +238,16 @@
 
 ---
 
-## 🌟 **Dicas para Manter o Progresso**
+## **Dicas para Manter o Progresso**
 
-### **💡 Estratégias de Estudo**
+### **Estratégias de Estudo**
 1. **Estude diariamente** - Mesmo que seja apenas 30 minutos
 2. **Pratique constantemente** - A teoria sem prática não funciona
 3. **Documente seu aprendizado** - Mantenha um log de progresso
 4. **Participe da comunidade** - Compartilhe e aprenda com outros
 5. **Celebre pequenas conquistas** - Cada item marcado é uma vitória
 
-### **🚀 Como Superar Obstáculos**
+### **Como Superar Obstáculos**
 - **Problemas técnicos:** Use o sistema de suporte e comunidade
 - **Falta de tempo:** Divida o estudo em blocos menores
 - **Dificuldade com conceitos:** Revise e pratique mais
@@ -255,19 +255,19 @@
 
 ---
 
-## 🎉 **Parabéns pelo Seu Progresso!**
+## **Parabéns pelo Seu Progresso!**
 
-**🎓 Cada item marcado é um passo em direção ao seu objetivo!**
+**Cada item marcado é um passo em direção ao seu objetivo!**
 
-**💻 Continue praticando e aprendendo!**
+**Continue praticando e aprendendo!**
 
-**🚀 Você está no caminho para se tornar um QA Automation Expert!**
+**Você está no caminho para se tornar um QA Automation Expert!**
 
 ---
 
 <div align="center">
 
-**🌟 Transforme sua carreira com automação! 🌟**
+**Transforme sua carreira com automação!**
 
 **Feito com ❤️ para a comunidade de QA**
 

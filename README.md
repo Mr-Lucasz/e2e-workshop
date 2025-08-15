@@ -1,6 +1,6 @@
-# 🎓 **Curso Interativo de Automação E2E com Cypress + Cucumber**
+# **Curso Interativo de Automação E2E com Cypress + Cucumber**
 
-> **🚀 Transforme-se em um QA Automation Expert em 4 módulos práticos!** 
+> **Transforme-se em um QA Automation Expert em 4 módulos práticos!** 
 > 
 > **Aprenda Cypress na prática com cenários reais, desafios progressivos e um projeto completo para seu portfólio!**
 
@@ -12,9 +12,9 @@
 
 ---
 
-## 🎯 **O que você vai aprender neste curso?**
+## **O que você vai aprender neste curso?**
 
-### **📚 Teoria + Prática = Sucesso Garantido!**
+### **Teoria + Prática = Sucesso Garantido!**
 
 - ✅ **Módulo 1:** Fundamentos do Cypress e primeiro teste (Login.feature)
 - ✅ **Módulo 2:** Testes de API e integração (LoginApi.feature)
@@ -23,15 +23,15 @@
 
 ---
 
-## 🚀 **Comece Agora - É Gratuito!**
+## **Comece Agora - É Gratuito!**
 
-### **🎬 Pré-requisitos**
+### **Pré-requisitos**
 - **Node.js 18+** instalado
 - **Conhecimento básico** de JavaScript
 - **Vontade de aprender** e praticar
 - **Git** para versionamento
 
-### **⚡ Setup Rápido (2 minutos)**
+### **Setup Rápido (2 minutos)**
 ```bash
 # 1. Clone o curso
 git clone https://github.com/lucas-egswf/automation-test.git
@@ -46,16 +46,16 @@ npm run cypress:open
 
 ---
 
-## 📖 **Estrutura do Curso - Aprenda Progressivamente**
+## **Estrutura do Curso - Aprenda Progressivamente**
 
-### **🌱 MÓDULO 1: Fundamentos (Login.feature)**
+### **MÓDULO 1: Fundamentos (Login.feature)**
 
-#### **📁 `cypress/e2e/features/Login.feature`**
+#### **`cypress/e2e/features/Login.feature`**
 - **O que você vai aprender:** Primeiros passos com Cypress
 - **Conceitos:** `cy.visit`, `cy.get`, `cy.type`, `cy.click`, assertions básicas
 - **Desafio:** Implemente o teste de login e veja a mágica acontecer!
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 - Como escrever seu primeiro teste
 - Comandos básicos do Cypress
 - Assertions e validações
@@ -63,14 +63,14 @@ npm run cypress:open
 
 ---
 
-### **🚀 MÓDULO 2: Testes de API (LoginApi.feature)**
+### **MÓDULO 2: Testes de API (LoginApi.feature)**
 
-#### **📁 `cypress/e2e/features/LoginApi.feature`**
+#### **`cypress/e2e/features/LoginApi.feature`**
 - **O que você vai aprender:** Testes de API com Cypress
 - **Conceitos:** `cy.request`, validação de status codes, headers e responses
 - **Desafio:** Teste a API de login e valide as respostas!
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 - Como testar APIs com Cypress
 - Validação de respostas HTTP
 - Testes de integração backend
@@ -78,14 +78,14 @@ npm run cypress:open
 
 ---
 
-### **🔥 MÓDULO 3: Interação e Validações (FilterProducts.feature)**
+### **MÓDULO 3: Interação e Validações (FilterProducts.feature)**
 
-#### **📁 `cypress/e2e/features/FilterProducts.feature`**
+#### **`cypress/e2e/features/FilterProducts.feature`**
 - **O que você vai aprender:** Interação com elementos complexos
 - **Conceitos:** Filtros, dropdowns, validação de resultados dinâmicos
 - **Desafio:** Implemente testes de filtro e busca de produtos!
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 - Interação com elementos dinâmicos
 - Validação de resultados filtrados
 - Testes de funcionalidades de busca
@@ -93,14 +93,14 @@ npm run cypress:open
 
 ---
 
-### **🏆 MÓDULO 4: Fluxos Complexos (AddItemCart.feature)**
+### **MÓDULO 4: Fluxos Complexos (AddItemCart.feature)**
 
-#### **📁 `cypress/e2e/features/AddItemCart.feature`**
+#### **`cypress/e2e/features/AddItemCart.feature`**
 - **O que você vai aprender:** Fluxos completos e Page Objects
 - **Conceitos:** Page Object Model, fluxos de negócio, validações complexas
 - **Desafio:** Crie um fluxo completo de adição ao carrinho!
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 - Arquitetura Page Object para testes manuteníveis
 - Fluxos de negócio complexos
 - Organização de código profissional
@@ -108,9 +108,9 @@ npm run cypress:open
 
 ---
 
-## 🎮 **Desafios Práticos - Aprenda Fazendo!**
+## **Desafios Práticos - Aprenda Fazendo!**
 
-### **🏁 Desafio #1: Login Automatizado**
+### **Desafio #1: Login Automatizado**
 ```gherkin
 # Execute o Login.feature existente e depois modifique para:
 Feature: Login Automatizado
@@ -127,11 +127,11 @@ Feature: Login Automatizado
     And devo ver a mensagem "Products"
 ```
 
-**🎯 Seu objetivo:** Execute o teste existente e depois modifique para adicionar validações extras!
+**Seu objetivo:** Execute o teste existente e depois modifique para adicionar validações extras!
 
 ---
 
-### **🏁 Desafio #2: Carrinho de Compras**
+### **Desafio #2: Carrinho de Compras**
 ```gherkin
 # Execute o AddItemCart.feature existente e depois expanda para:
 Feature: Gerenciamento de Carrinho
@@ -148,11 +148,11 @@ Feature: Gerenciamento de Carrinho
     And o contador do carrinho deve mostrar "1"
 ```
 
-**🎯 Seu objetivo:** Execute o teste existente e depois crie cenários adicionais!
+**Seu objetivo:** Execute o teste existente e depois crie cenários adicionais!
 
 ---
 
-### **🏁 Desafio #3: Testes de API**
+### **Desafio #3: Testes de API**
 ```gherkin
 # Execute o LoginApi.feature existente e depois expanda para:
 Feature: Testes de API
@@ -167,13 +167,13 @@ Feature: Testes de API
     And devo receber um token de autenticação
 ```
 
-**🎯 Seu objetivo:** Execute o teste existente e depois adicione mais validações de API!
+**Seu objetivo:** Execute o teste existente e depois adicione mais validações de API!
 
 ---
 
-## 🛠️ **Ferramentas que você vai dominar**
+## **Ferramentas que você vai dominar**
 
-### **🔧 Stack Tecnológica Completa**
+### **Stack Tecnológica Completa**
 - **Cypress** - Framework de automação E2E
 - **Cucumber** - BDD e cenários em linguagem natural
 - **Page Object Model** - Arquitetura de testes
@@ -181,7 +181,7 @@ Feature: Testes de API
 - **Docker** - Containerização e ambientes
 - **ESLint + Prettier** - Qualidade de código
 
-### **📊 Relatórios e Dashboards**
+### **Relatórios e Dashboards**
 - Screenshots automáticos em falhas
 - Gravações de vídeo das execuções
 - Relatórios HTML personalizados
@@ -189,16 +189,16 @@ Feature: Testes de API
 
 ---
 
-## 🎯 **Metodologia de Aprendizado**
+## **Metodologia de Aprendizado**
 
-### **📚 Aprenda na Prática**
-1. **📖 Leia** a teoria e exemplos
-2. **💻 Execute** os testes existentes
-3. **🔧 Modifique** e experimente
-4. **🚀 Crie** seus próprios cenários
-5. **📝 Documente** seu aprendizado
+### **Aprenda na Prática**
+1. **Leia** a teoria e exemplos
+2. **Execute** os testes existentes
+3. **Modifique** e experimente
+4. **Crie** seus próprios cenários
+5. **Documente** seu aprendizado
 
-### **🏆 Sistema de Conquistas**
+### **Sistema de Conquistas**
 - **🥉 Bronze:** Execute todos os testes existentes
 - **🥈 Prata:** Modifique e expanda os cenários
 - **🥇 Ouro:** Crie novos cenários e Page Objects
@@ -206,15 +206,15 @@ Feature: Testes de API
 
 ---
 
-## 🚀 **Projetos Práticos para seu Portfólio**
+## **Projetos Práticos para seu Portfólio**
 
-### **🛒 E-commerce Automation (Já implementado!)**
+### **E-commerce Automation (Já implementado!)**
 - ✅ Testes de login e autenticação
 - ✅ Testes de API de login
 - ✅ Filtros e busca de produtos
 - ✅ Adição ao carrinho de compras
 
-### **🔧 Como expandir o projeto:**
+### **Como expandir o projeto:**
 - Adicione testes de checkout
 - Implemente testes de responsividade
 - Crie testes de performance
@@ -222,15 +222,15 @@ Feature: Testes de API
 
 ---
 
-## 🌟 **Comunidade e Suporte**
+## **Comunidade e Suporte**
 
-### **🤝 Aprenda com Outros QAs**
+### **Aprenda com Outros QAs**
 - **Discussions** no GitHub para dúvidas
 - **Issues** para reportar problemas
 - **Pull Requests** para contribuir
 - **Comunidade ativa** de aprendizes
 
-### **📚 Recursos Extras**
+### **Recursos Extras**
 - **Vídeos tutoriais** para cada módulo
 - **Webinars semanais** com especialistas
 - **Challenges mensais** com prêmios
@@ -238,9 +238,9 @@ Feature: Testes de API
 
 ---
 
-## 📊 **Seu Progresso no Curso**
+## **Seu Progresso no Curso**
 
-### **📈 Dashboard de Aprendizado**
+### **Dashboard de Aprendizado**
 ```bash
 # Execute os testes por módulo
 npm run test:module1    # Login.feature
@@ -252,7 +252,7 @@ npm run test:module4    # AddItemCart.feature
 npm run test:all
 ```
 
-### **🏅 Certificado de Conclusão**
+### **Certificado de Conclusão**
 Após completar todos os módulos, você receberá:
 - **Certificado digital** de QA Automation Expert
 - **Badge no LinkedIn** para seu perfil
@@ -261,7 +261,7 @@ Após completar todos os módulos, você receberá:
 
 ---
 
-## 🎉 **Depoimentos de Quem Já Aprendeu**
+## **Depoimentos de Quem Já Aprendeu**
 
 > *"Este curso transformou minha carreira! Em 4 módulos aprendi mais do que em meses de estudo sozinho."* 
 > **- Maria Silva, QA Senior**
@@ -274,9 +274,9 @@ Após completar todos os módulos, você receberá:
 
 ---
 
-## 🚀 **Comece Agora - Não Perca Tempo!**
+## **Comece Agora - Não Perca Tempo!**
 
-### **⚡ Setup em 2 minutos:**
+### **Setup em 2 minutos:**
 ```bash
 git clone https://github.com/lucas-egswf/automation-test.git
 cd automation-test
@@ -284,30 +284,30 @@ npm install
 npm run cypress:open
 ```
 
-### **🎯 Primeiro objetivo:**
+### **Primeiro objetivo:**
 Execute o `Login.feature` e veja a mágica acontecer!
 
-### **📚 Guia Completo de Aprendizado:**
+### **Guia Completo de Aprendizado:**
 **[LEARNING_GUIDE.md](LEARNING_GUIDE.md)** - Guia detalhado de como usar este repositório como curso!
 
-### **🗺️ Roteiro de Estudos:**
+### **Roteiro de Estudos:**
 **[STUDY_ROADMAP.md](STUDY_ROADMAP.md)** - Cronograma diário de 4 semanas para dominar Cypress!
 
-### **✅ Checklist de Progresso:**
+### **Checklist de Progresso:**
 **[PROGRESS_CHECKLIST.md](PROGRESS_CHECKLIST.md)** - Acompanhe seu progresso e conquiste todas as medalhas!
 
-### **🚀 Início Rápido:**
+### **Início Rápido:**
 **[QUICK_START.md](QUICK_START.md)** - Setup em 5 minutos e primeiro teste em 30 segundos!
 
 ---
 
-## 🌟 **Transforme sua Carreira em QA Automation!**
+## **Transforme sua Carreira em QA Automation!**
 
-**🎓 4 módulos práticos e interativos**
-**💻 100% baseado no que já funciona**
-**🏆 Projeto real para seu portfólio**
-**🤝 Comunidade ativa de QAs**
-**🚀 Certificado reconhecido**
+**4 módulos práticos e interativos**
+**100% baseado no que já funciona**
+**Projeto real para seu portfólio**
+**Comunidade ativa de QAs**
+**Certificado reconhecido**
 
 ---
 
@@ -319,7 +319,7 @@ Execute o `Login.feature` e veja a mágica acontecer!
 [![GitHub forks](https://img.shields.io/github/forks/lucas-egswf/automation-test?style=social)](https://github.com/lucas-egswf/automation-test)
 [![GitHub issues](https://img.shields.io/github/issues/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test/issues)
 
-**🎓 Transforme-se em um QA Automation Expert! 🚀**
+**Transforme-se em um QA Automation Expert!**
 
 **Feito com ❤️ para a comunidade de QA**
 

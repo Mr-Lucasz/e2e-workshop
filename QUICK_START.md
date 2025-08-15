@@ -1,19 +1,19 @@
-# 🚀 **Início Rápido - Curso de Automação E2E**
+# **Início Rápido - Curso de Automação E2E**
 
-> **⚡ Configure seu ambiente e comece a aprender em menos de 5 minutos!**
+> **Configure seu ambiente e comece a aprender em menos de 5 minutos!** 
 > 
 > **Este guia te levará do zero ao primeiro teste executando em tempo recorde!**
 
 ---
 
-## ⚡ **Setup Super Rápido (5 minutos)**
+## **Setup Super Rápido (5 minutos)**
 
-### **🎯 Pré-requisitos**
+### **Pré-requisitos**
 - **Node.js 18+** instalado
 - **Git** para clonar o repositório
 - **Editor de código** (VS Code recomendado)
 
-### **🔍 Verificar Instalações**
+### **Verificar Instalações**
 ```bash
 # Verifique se o Node.js está instalado
 node --version
@@ -25,13 +25,13 @@ npm --version
 git --version
 ```
 
-**✅ Se todos os comandos retornarem versões, você está pronto!**
+**Se todos os comandos retornarem versões, você está pronto!**
 
 ---
 
-## 🚀 **Passo a Passo Rápido**
+## **Passo a Passo Rápido**
 
-### **1️⃣ Clone o Repositório (1 minuto)**
+### **1. Clone o Repositório (1 minuto)**
 ```bash
 # Clone o curso
 git clone https://github.com/lucas-egswf/automation-test.git
@@ -40,15 +40,15 @@ git clone https://github.com/lucas-egswf/automation-test.git
 cd automation-test
 ```
 
-### **2️⃣ Instale as Dependências (2 minutos)**
+### **2. Instale as Dependências (2 minutos)**
 ```bash
 # Instale todas as dependências
 npm install
 ```
 
-**⏳ Aguarde a instalação terminar...**
+**Aguarde a instalação terminar...**
 
-### **3️⃣ Configure as Variáveis de Ambiente (1 minuto)**
+### **3. Configure as Variáveis de Ambiente (1 minuto)**
 ```bash
 # Copie o arquivo de exemplo
 copy env.example .env
@@ -57,21 +57,21 @@ copy env.example .env
 # cp env.example .env
 ```
 
-**🔧 Edite o arquivo `.env` se necessário**
+**Edite o arquivo `.env` se necessário**
 
-### **4️⃣ Execute seu Primeiro Teste (1 minuto)**
+### **4. Execute seu Primeiro Teste (1 minuto)**
 ```bash
 # Abra o Cypress
 npm run cypress:open
 ```
 
-**🎉 Parabéns! Você está rodando o Cypress!**
+**Parabéns! Você está rodando o Cypress!**
 
 ---
 
-## 🎯 **Primeiro Teste em 30 Segundos**
+## **Primeiro Teste em 30 Segundos**
 
-### **📱 No Cypress Test Runner:**
+### **No Cypress Test Runner:**
 
 1. **Clique** em "E2E Testing"
 2. **Escolha** um browser (Chrome recomendado)
@@ -79,13 +79,13 @@ npm run cypress:open
 4. **Clique** em "Login.feature" na lista de testes
 5. **Clique** em "Run 1 integration spec"
 
-**🎬 Assista seu primeiro teste executar automaticamente!**
+**Assista seu primeiro teste executar automaticamente!**
 
 ---
 
-## 🔧 **Configurações Recomendadas**
+## **Configurações Recomendadas**
 
-### **💻 VS Code Extensions**
+### **VS Code Extensions**
 ```json
 // .vscode/extensions.json já está configurado!
 // Instale automaticamente:
@@ -95,7 +95,7 @@ npm run cypress:open
 // - ESLint
 ```
 
-### **⚙️ Configurações do Editor**
+### **Configurações do Editor**
 ```json
 // .vscode/settings.json já está configurado!
 // - Formatação automática
@@ -105,9 +105,9 @@ npm run cypress:open
 
 ---
 
-## 🚨 **Solução de Problemas Comuns**
+## **Solução de Problemas Comuns**
 
-### **❌ Erro: "cypress command not found"**
+### **Erro: "cypress command not found"**
 ```bash
 # Solução: Instale o Cypress globalmente
 npm install -g cypress
@@ -116,14 +116,14 @@ npm install -g cypress
 npx cypress open
 ```
 
-### **❌ Erro: "Cannot find module"**
+### **Erro: "Cannot find module"**
 ```bash
 # Solução: Reinstale as dependências
 rm -rf node_modules package-lock.json
 npm install
 ```
 
-### **❌ Erro: "Chrome not found"**
+### **Erro: "Chrome not found"**
 ```bash
 # Solução: Use outro browser ou instale o Chrome
 npm run cypress:run:firefox
@@ -131,7 +131,7 @@ npm run cypress:run:firefox
 npm run cypress:run:edge
 ```
 
-### **❌ Erro: "Base URL not found"**
+### **Erro: "Base URL not found"**
 ```bash
 # Solução: Configure a URL base
 set CYPRESS_BASE_URL=https://www.saucedemo.com
@@ -140,16 +140,16 @@ set CYPRESS_BASE_URL=https://www.saucedemo.com
 
 ---
 
-## 📚 **Próximos Passos**
+## **Próximos Passos**
 
-### **🎓 Após o Setup Rápido:**
+### **Após o Setup Rápido:**
 
-1. **📖 Leia o [README.md](README.md)** - Visão geral do curso
-2. **🗺️ Siga o [STUDY_ROADMAP.md](STUDY_ROADMAP.md)** - Roteiro de estudos
-3. **✅ Use o [PROGRESS_CHECKLIST.md](PROGRESS_CHECKLIST.md)** - Acompanhe seu progresso
-4. **📚 Consulte o [LEARNING_GUIDE.md](LEARNING_GUIDE.md)** - Guia detalhado
+1. **Leia o [README.md](README.md)** - Visão geral do curso
+2. **Siga o [STUDY_ROADMAP.md](STUDY_ROADMAP.md)** - Roteiro de estudos
+3. **Use o [PROGRESS_CHECKLIST.md](PROGRESS_CHECKLIST.md)** - Acompanhe seu progresso
+4. **Consulte o [LEARNING_GUIDE.md](LEARNING_GUIDE.md)** - Guia detalhado
 
-### **🚀 Comandos Úteis para Começar:**
+### **Comandos Úteis para Começar:**
 ```bash
 # Executar testes por módulo
 npm run test:module1    # Primeiro módulo - Fundamentos
@@ -169,21 +169,21 @@ npx cypress cache clear
 
 ---
 
-## 🌟 **Dicas para Iniciantes**
+## **Dicas para Iniciantes**
 
-### **💡 Comece Pequeno:**
+### **Comece Pequeno:**
 - **Dia 1:** Apenas execute o primeiro teste
 - **Dia 2:** Entenda o que o teste está fazendo
 - **Dia 3:** Modifique algo pequeno no teste
 - **Dia 4:** Crie um teste simples do zero
 
-### **🔍 Use o Modo Interativo:**
+### **Use o Modo Interativo:**
 - **Cypress Open** é seu melhor amigo no início
 - **Assista** os testes executando em tempo real
 - **Pause** e inspecione elementos quando necessário
 - **Debug** passo a passo
 
-### **📝 Documente seu Aprendizado:**
+### **Documente seu Aprendizado:**
 - **Anote** conceitos que você aprendeu
 - **Screenshot** de erros para referência futura
 - **Comente** seu código conforme aprende
@@ -191,25 +191,25 @@ npx cypress cache clear
 
 ---
 
-## 🎉 **Parabéns por Começar!**
+## **Parabéns por Começar!**
 
-**🎓 Você acabou de dar o primeiro passo para se tornar um QA Automation Expert!**
+**Você acabou de dar o primeiro passo para se tornar um QA Automation Expert!**
 
-**💻 O ambiente está configurado e funcionando!**
+**O ambiente está configurado e funcionando!**
 
-**🚀 Agora é hora de aprender e praticar!**
+**Agora é hora de aprender e praticar!**
 
 ---
 
-## 📞 **Precisa de Ajuda?**
+## **Precisa de Ajuda?**
 
-### **🔍 Recursos de Suporte:**
+### **Recursos de Suporte:**
 - **[SUPPORT.md](SUPPORT.md)** - Guia completo de suporte
 - **[GitHub Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reporte bugs
 - **[GitHub Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Faça perguntas
 - **[Documentação Cypress](https://docs.cypress.io/)** - Referência oficial
 
-### **💬 Comunidade:**
+### **Comunidade:**
 - **Discord:** [Link para comunidade]
 - **Telegram:** [Link para grupo]
 - **LinkedIn:** [Link para grupo profissional]
@@ -218,7 +218,7 @@ npx cypress cache clear
 
 <div align="center">
 
-**🌟 Transforme sua carreira com automação! 🌟**
+**Transforme sua carreira com automação!**
 
 **Feito com ❤️ para a comunidade de QA**
 

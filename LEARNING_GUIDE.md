@@ -1,31 +1,31 @@
-# 📚 **Guia de Aprendizado - Curso de Automação E2E**
+# **Guia de Aprendizado - Curso de Automação E2E**
 
-> **🎯 Aprenda Cypress progressivamente usando o que já existe!**
+> **Aprenda Cypress progressivamente usando o que já existe!**
 >
 > **Este guia mostra como transformar as features existentes em um curso completo de automação.**
 
 ---
 
-## 🎓 **Como Usar Este Repositório como Curso**
+## **Como Usar Este Repositório como Curso**
 
-### **📋 Estrutura de Aprendizado**
+### **Estrutura de Aprendizado**
 
 Este repositório foi organizado como um **curso progressivo** onde você aprende Cypress usando as features existentes. Cada feature representa um módulo de aprendizado com objetivos específicos.
 
 ---
 
-## 🌱 **MÓDULO 1: Fundamentos do Cypress**
+## **MÓDULO 1: Fundamentos do Cypress**
 
-### **📁 Feature: `Login.feature`**
+### **Feature: `Login.feature`**
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 
 - Entender a estrutura básica de um teste Cypress
 - Aprender comandos fundamentais (`cy.visit`, `cy.get`, `cy.type`, `cy.click`)
 - Compreender assertions e validações básicas
 - Praticar debugging e troubleshooting
 
-#### **📖 Como Estudar:**
+#### **Como Estudar:**
 
 1. **Leia** o arquivo `Login.feature` e entenda a estrutura Gherkin
 2. **Execute** o teste: `npm run test:module1`
@@ -33,7 +33,7 @@ Este repositório foi organizado como um **curso progressivo** onde você aprend
 4. **Modifique** o teste para adicionar validações extras
 5. **Experimente** com diferentes cenários
 
-#### **🔧 Conceitos-Chave:**
+#### **Conceitos-Chave:**
 
 ```javascript
 // Comandos básicos que você vai aprender
@@ -44,7 +44,7 @@ cy.click(); // Clicar em elementos
 cy.should('be.visible'); // Assertions básicas
 ```
 
-#### **💡 Desafio Extra:**
+#### **Desafio Extra:**
 
 - Adicione validação para credenciais inválidas
 - Implemente teste de logout
@@ -52,18 +52,18 @@ cy.should('be.visible'); // Assertions básicas
 
 ---
 
-## 🚀 **MÓDULO 2: Testes de API**
+## **MÓDULO 2: Testes de API**
 
-### **📁 Feature: `LoginApi.feature`**
+### **Feature: `LoginApi.feature`**
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 
 - Compreender como testar APIs com Cypress
 - Aprender comandos de requisição HTTP (`cy.request`)
 - Validar status codes, headers e responses
 - Implementar testes de integração backend
 
-#### **📖 Como Estudar:**
+#### **Como Estudar:**
 
 1. **Leia** o arquivo `LoginApi.feature`
 2. **Execute** o teste: `npm run test:module2`
@@ -71,7 +71,7 @@ cy.should('be.visible'); // Assertions básicas
 4. **Experimente** com diferentes endpoints
 5. **Crie** testes para outros cenários de API
 
-#### **🔧 Conceitos-Chave:**
+#### **Conceitos-Chave:**
 
 ```javascript
 // Testes de API que você vai aprender
@@ -85,7 +85,7 @@ cy.request({
 });
 ```
 
-#### **💡 Desafio Extra:**
+#### **Desafio Extra:**
 
 - Teste diferentes métodos HTTP (GET, PUT, DELETE)
 - Valide headers de resposta
@@ -94,18 +94,18 @@ cy.request({
 
 ---
 
-## 🔥 **MÓDULO 3: Interação e Validações**
+## **MÓDULO 3: Interação e Validações**
 
-### **📁 Feature: `FilterProducts.feature`**
+### **Feature: `FilterProducts.feature`**
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 
 - Interagir com elementos dinâmicos (dropdowns, filtros)
 - Validar resultados de operações de busca
 - Implementar testes de funcionalidades complexas
 - Praticar assertions avançadas
 
-#### **📖 Como Estudar:**
+#### **Como Estudar:**
 
 1. **Leia** o arquivo `FilterProducts.feature`
 2. **Execute** o teste: `npm run test:module3`
@@ -113,7 +113,7 @@ cy.request({
 4. **Experimente** com diferentes filtros e buscas
 5. **Crie** cenários para edge cases
 
-#### **🔧 Conceitos-Chave:**
+#### **Conceitos-Chave:**
 
 ```javascript
 // Interações avançadas que você vai aprender
@@ -123,7 +123,7 @@ cy.get('[data-test="filter"]').click(); // Filtros
 cy.contains('Sauce Labs Backpack').should('be.visible'); // Busca por texto
 ```
 
-#### **💡 Desafio Extra:**
+#### **Desafio Extra:**
 
 - Implemente testes para todos os tipos de filtro
 - Adicione validação de ordenação
@@ -132,18 +132,18 @@ cy.contains('Sauce Labs Backpack').should('be.visible'); // Busca por texto
 
 ---
 
-## 🏆 **MÓDULO 4: Fluxos Complexos e Page Objects**
+## **MÓDULO 4: Fluxos Complexos e Page Objects**
 
-### **📁 Feature: `AddItemCart.feature`**
+### **Feature: `AddItemCart.feature`**
 
-#### **🎯 Objetivos de Aprendizado:**
+#### **Objetivos de Aprendizado:**
 
 - Compreender Page Object Model
 - Implementar fluxos de negócio complexos
 - Organizar código de forma profissional
 - Integrar diferentes funcionalidades
 
-#### **📖 Como Estudar:**
+#### **Como Estudar:**
 
 1. **Leia** o arquivo `AddItemCart.feature`
 2. **Execute** o teste: `npm run test:module4`
@@ -151,7 +151,7 @@ cy.contains('Sauce Labs Backpack').should('be.visible'); // Busca por texto
 4. **Entenda** como Page Objects são organizados
 5. **Expanda** o fluxo para checkout completo
 
-#### **🔧 Conceitos-Chave:**
+#### **Conceitos-Chave:**
 
 ```javascript
 // Page Object Model que você vai aprender
@@ -168,7 +168,7 @@ export class ProductPage {
 }
 ```
 
-#### **💡 Desafio Extra:**
+#### **Desafio Extra:**
 
 - Implemente fluxo completo de checkout
 - Adicione validação de preços e totais
@@ -177,9 +177,9 @@ export class ProductPage {
 
 ---
 
-## 🎮 **Metodologia de Aprendizado Recomendada**
+## **Metodologia de Aprendizado Recomendada**
 
-### **📚 Passo a Passo:**
+### **Passo a Passo:**
 
 #### **Semana 1: Fundamentos**
 
@@ -207,9 +207,9 @@ export class ProductPage {
 
 ---
 
-## 🛠️ **Ferramentas de Apoio**
+## **Ferramentas de Apoio**
 
-### **📊 Comandos de Progresso:**
+### **Comandos de Progresso:**
 
 ```bash
 # Execute módulos individualmente
@@ -220,12 +220,9 @@ npm run test:module4    # Fluxos Complexos
 
 # Execute todos os testes
 npm run test:all
-
-# Modo interativo para desenvolvimento
-npm run cypress:open
 ```
 
-### **🔍 Debugging e Desenvolvimento:**
+### **Debugging e Desenvolvimento:**
 
 ```bash
 # Limpar cache se necessário
@@ -240,7 +237,7 @@ DEBUG=cypress:* npm run test:module1
 
 ---
 
-## 🎯 **Sistema de Conquistas**
+## **Sistema de Conquistas**
 
 ### **🥉 Bronze - Fundamentos**
 
@@ -271,23 +268,23 @@ DEBUG=cypress:* npm run test:module1
 
 ---
 
-## 🌟 **Próximos Passos Após o Curso**
+## **Próximos Passos Após o Curso**
 
-### **🚀 Expanda o Projeto:**
+### **Expanda o Projeto:**
 
 - Adicione testes de responsividade
 - Implemente testes de performance
 - Crie testes de acessibilidade
 - Adicione testes de regressão visual
 
-### **🔧 Tecnologias Avançadas:**
+### **Tecnologias Avançadas:**
 
 - TypeScript para type safety
 - Testes de performance com Lighthouse
 - Integração com ferramentas de CI/CD
 - Relatórios HTML personalizados
 
-### **🤝 Contribua para a Comunidade:**
+### **Contribua para a Comunidade:**
 
 - Compartilhe seus aprendizados
 - Ajude outros QAs iniciantes
@@ -296,23 +293,23 @@ DEBUG=cypress:* npm run test:module1
 
 ---
 
-## 📞 **Suporte e Ajuda**
+## **Suporte e Ajuda**
 
-### **❓ Quando Pedir Ajuda:**
+### **Quando Pedir Ajuda:**
 
 - Após tentar resolver o problema por 30 minutos
 - Quando o erro não for claro
 - Para entender conceitos específicos
 - Para validação de sua solução
 
-### **🔍 Como Pedir Ajuda:**
+### **Como Pedir Ajuda:**
 
 1. **Descreva** o problema claramente
 2. **Inclua** logs de erro
 3. **Mencione** o que você já tentou
 4. **Especifique** o módulo que está estudando
 
-### **📚 Recursos Adicionais:**
+### **Recursos Adicionais:**
 
 - [Documentação oficial do Cypress](https://docs.cypress.io/)
 - [Cucumber BDD Guide](https://cucumber.io/docs/bdd/)
@@ -321,19 +318,19 @@ DEBUG=cypress:* npm run test:module1
 
 ---
 
-## 🎉 **Parabéns pelo Início da Jornada!**
+## **Parabéns pelo Início da Jornada!**
 
-**🎓 Você está no caminho para se tornar um QA Automation Expert!**
+**Você está no caminho para se tornar um QA Automation Expert!**
 
-**💻 Aprenda fazendo, experimente, erre e aprenda mais!**
+**Aprenda fazendo, experimente, erre e aprenda mais!**
 
-**🚀 A comunidade está aqui para te apoiar!**
+**A comunidade está aqui para te apoiar!**
 
 ---
 
 <div align="center">
 
-**🌟 Transforme sua carreira com automação! 🌟**
+**Transforme sua carreira com automação!**
 
 **Feito com ❤️ para a comunidade de QA**
 
