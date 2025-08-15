@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  cypress:
+    build: .
+    container_name: cypress-workshop
+    environment:
+      - CYPRESS_BASE_URL=https://www.saucedemo.com
+      - CYPRESS_USERNAME=standard_user
+      - CYPRESS_PASSWORD=secret_sauce
+    volumes:
+      - ./cypress:/app/cypress
+      - ./cypress/videos:/app/cypress/videos
+      - ./cypress/screenshots:/app/cypress/screenshots
+    command: npm run cypress:run:headless
+    depends_on:
+      - chrome
+
+  chrome:
+    image: selenium/standalone-chrome:latest
+    container_name: chrome-browser
+    environment:
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+    ports:
+      - "4444:4444"
+      - "7900:7900"
+    volumes:
+      - /dev/shm:/dev/shm
+    shm_size: 2gb
+
+  firefox:
+    image: selenium/standalone-firefox:latest
+    container_name: firefox-browser
+    environment:
+      - SE_NODE_MAX_SESSIONS=4
+      - SE_NODE_OVERRIDE_MAX_SESSIONS=true
+    ports:
+      - "4445:4444"
+      - "7901:7900"
+    volumes:
+      - /dev/shm:/dev/shm
+    shm_size: 2gb
+
+volumes:
+  cypress-data:
