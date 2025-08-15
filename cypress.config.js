@@ -22,38 +22,6 @@ async function setupNodeEvents(on, config) {
     plugins: [createEsbuildPlugin(config)],
   }));
 
-  // Configuração para relatórios e métricas
-  on('after:run', async (results) => {
-    if (results) {
-      // Salvar resultados para análise
-      await fs.writeJson('cypress/results/run-results.json', results);
-      
-      // Calcular métricas de coverage
-      const totalTests = results.totalTests || 0;
-      const passedTests = results.totalPassed || 0;
-      const failedTests = results.totalFailed || 0;
-      const skippedTests = results.totalSkipped || 0;
-      
-      const coverage = totalTests > 0 ? Math.round((passedTests / totalTests) * 100) : 0;
-      
-      console.log(`\n📊 Test Results Summary:`);
-      console.log(`✅ Passed: ${passedTests}`);
-      console.log(`❌ Failed: ${failedTests}`);
-      console.log(`⏭️ Skipped: ${skippedTests}`);
-      console.log(`📈 Coverage: ${coverage}%`);
-      
-      // Salvar métricas para badges
-      await fs.writeJson('cypress/results/metrics.json', {
-        totalTests,
-        passedTests,
-        failedTests,
-        skippedTests,
-        coverage,
-        timestamp: new Date().toISOString()
-      });
-    }
-  });
-
   return config;
 }
 
@@ -73,18 +41,6 @@ module.exports = defineConfig({
     viewportWidth: 1200,
     viewportHeight: 900,
     experimentalRunAllSpecs: true,
-    // Configurações para relatórios
-    reporter: 'cypress-multi-reporters',
-    reporterOptions: {
-      reporterEnabled: 'mochawesome, spec',
-      mochawesomeReporterOptions: {
-        charts: true,
-        reportPageTitle: 'Cypress Test Results',
-        embeddedScreenshots: true,
-        inlineAssets: true,
-        saveAllAttempts: false,
-      },
-    },
   },
   experimentalMemoryManagement: true,
 });

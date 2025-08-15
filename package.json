@@ -5,27 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "cypress run",
-    "cypress:open": "set CYPRESS_BASE_URL=https://www.saucedemo.com/ && set CYPRESS_USERNAME=standard_user && set CYPRESS_SENHA=secret_sauce && cypress open",
+    "cypress:open": "cypress open",
     "cypress:run": "cypress run",
-    "cypress:run:headless": "cypress run --headless",
-    "cypress:run:chrome": "cypress run --browser chrome",
-    "cypress:run:firefox": "cypress run --browser firefox",
-    "cypress:run:edge": "cypress run --browser edge",
-    "test:module1": "cypress run --spec \"cypress/e2e/features/Login.feature\"",
-    "test:module2": "cypress run --spec \"cypress/e2e/features/LoginApi.feature\"",
-    "test:module3": "cypress run --spec \"cypress/e2e/features/FilterProducts.feature\"",
-    "test:module4": "cypress run --spec \"cypress/e2e/features/AddItemCart.feature\"",
     "test:all": "cypress run --spec \"cypress/e2e/features/**/*.feature\"",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "lint:fix": "eslint . --ext .js,.jsx,.ts,.tsx --fix",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "prepare": "husky install",
-    "report:generate": "mochawesome-merge cypress/results/*.json > cypress/results/merged-report.json && marge cypress/results/merged-report.json -o cypress/reports",
-    "report:open": "open cypress/reports/index.html",
-    "metrics:show": "node -e \"const metrics = require('./cypress/results/metrics.json'); console.log('📊 Test Metrics:', JSON.stringify(metrics, null, 2));\"",
-    "coverage:badge": "node scripts/generate-coverage-badge.js",
-    "cleanup": "node scripts/cleanup.js"
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,md}\""
   },
   "author": "lucas-egswf",
   "license": "MIT",
@@ -35,13 +21,7 @@
     "esbuild": "^0.25.9",
     "eslint": "^9.0.0",
     "eslint-plugin-cypress": "^2.15.1",
-    "prettier": "^3.2.5",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
-    "cypress-multi-reporters": "^1.6.3",
-    "mochawesome": "^7.1.3",
-    "mochawesome-merge": "^4.2.2",
-    "mochawesome-report-generator": "^6.2.0"
+    "prettier": "^3.2.5"
   },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^20.0.2"
