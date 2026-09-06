@@ -313,8 +313,8 @@ DEBUG=cypress:* npm run test:module1
 
 - [Documentação oficial do Cypress](https://docs.cypress.io/)
 - [Cucumber BDD Guide](https://cucumber.io/docs/bdd/)
-- [GitHub Discussions](https://github.com/lucas-egswf/automation-test/discussions)
-- [Issues para bugs](https://github.com/lucas-egswf/automation-test/issues)
+- [GitHub Discussions](https://github.com/Mr-Lucasz/automation-test/discussions)
+- [Issues para bugs](https://github.com/Mr-Lucasz/automation-test/issues)
 
 ---
 

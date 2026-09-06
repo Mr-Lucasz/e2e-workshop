@@ -141,7 +141,7 @@ Este projeto segue o [Conventional Commits](https://www.conventionalcommits.org/
 ## 🤝 Contribuições
 
 ### 👥 Contribuidores Ativos
-- **@lucas-egswf** - Mantenedor principal
+- **@Mr-Lucasz** - Mantenedor principal
 - **Comunidade QA** - Contribuições e feedback
 
 ### 📝 Como Contribuir
@@ -161,8 +161,8 @@ Contribuidores ativos receberão:
 ### 🆘 Como Obter Ajuda
 - **Documentação:** [README.md](README.md)
 - **Suporte:** [SUPPORT.md](SUPPORT.md)
-- **Issues:** [GitHub Issues](https://github.com/lucas-egswf/automation-test/issues)
-- **Discussions:** [GitHub Discussions](https://github.com/lucas-egswf/automation-test/discussions)
+- **Issues:** [GitHub Issues](https://github.com/Mr-Lucasz/automation-test/issues)
+- **Discussions:** [GitHub Discussions](https://github.com/Mr-Lucasz/automation-test/discussions)
 
 ### 🔗 Links Úteis
 - **Cypress:** [docs.cypress.io](https://docs.cypress.io/)

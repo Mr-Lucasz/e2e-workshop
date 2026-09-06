@@ -14,7 +14,7 @@ Badges são pequenos ícones que mostram o status e métricas do seu projeto em 
 
 ### **1. 🧪 CI/CD Pipeline Status**
 ```markdown
-[![CI/CD](https://github.com/lucas-egswf/automation-test/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/lucas-egswf/automation-test/actions)
+[![CI/CD](https://github.com/Mr-Lucasz/automation-test/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/Mr-Lucasz/automation-test/actions)
 ```
 
 **O que mostra:** Status dos testes automatizados (passing/failing)
@@ -32,7 +32,7 @@ Badges são pequenos ícones que mostram o status e métricas do seu projeto em 
 
 ### **3. 📅 Last Commit**
 ```markdown
-[![Last Commit](https://img.shields.io/github/last-commit/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
+[![Last Commit](https://img.shields.io/github/last-commit/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test)
 ```
 
 **O que mostra:** Data do último commit
@@ -41,7 +41,7 @@ Badges são pequenos ícones que mostram o status e métricas do seu projeto em 
 
 ### **4. 🐛 Open Issues**
 ```markdown
-[![Open Issues](https://img.shields.io/github/issues/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test/issues)
+[![Open Issues](https://img.shields.io/github/issues/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test/issues)
 ```
 
 **O que mostra:** Número de issues abertas
@@ -50,7 +50,7 @@ Badges são pequenos ícones que mostram o status e métricas do seu projeto em 
 
 ### **5. ⭐ GitHub Stars**
 ```markdown
-[![GitHub Stars](https://img.shields.io/github/stars/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
+[![GitHub Stars](https://img.shields.io/github/stars/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test)
 ```
 
 **O que mostra:** Número de estrelas do repositório
@@ -255,7 +255,7 @@ Configure GitHub Actions para executar regularmente e manter os badges atualizad
 
 ```bash
 # 1. Clone o repositório
-git clone https://github.com/lucas-egswf/automation-test.git
+git clone https://github.com/Mr-Lucasz/automation-test.git
 
 # 2. Instale dependências
 npm install

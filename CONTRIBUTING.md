@@ -27,7 +27,7 @@ cd automation-test
 
 ### 2. **Configure o Remote Upstream**
 ```bash
-git remote add upstream https://github.com/lucas-egswf/automation-test.git
+git remote add upstream https://github.com/Mr-Lucasz/automation-test.git
 git fetch upstream
 ```
 

@@ -34,7 +34,7 @@ git --version
 ### **1. Clone o Repositório (1 minuto)**
 ```bash
 # Clone o curso
-git clone https://github.com/lucas-egswf/automation-test.git
+git clone https://github.com/Mr-Lucasz/automation-test.git
 
 # Entre na pasta
 cd automation-test
@@ -205,8 +205,8 @@ npx cypress cache clear
 
 ### **Recursos de Suporte:**
 - **[SUPPORT.md](SUPPORT.md)** - Guia completo de suporte
-- **[GitHub Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reporte bugs
-- **[GitHub Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Faça perguntas
+- **[GitHub Issues](https://github.com/Mr-Lucasz/automation-test/issues)** - Reporte bugs
+- **[GitHub Discussions](https://github.com/Mr-Lucasz/automation-test/discussions)** - Faça perguntas
 - **[Documentação Cypress](https://docs.cypress.io/)** - Referência oficial
 
 ### **Comunidade:**

@@ -49,8 +49,8 @@ Para respostas a perguntas comuns sobre este código de conduta, veja o FAQ em [
 Se você tiver dúvidas sobre este Código de Conduta ou precisar reportar um incidente, entre em contato conosco:
 
 - **Email:** [INSERIR_EMAIL]
-- **GitHub Issues:** [Crie uma issue](https://github.com/lucas-egswf/automation-test/issues/new)
-- **Discussions:** [Participe das discussões](https://github.com/lucas-egswf/automation-test/discussions)
+- **GitHub Issues:** [Crie uma issue](https://github.com/Mr-Lucasz/automation-test/issues/new)
+- **Discussions:** [Participe das discussões](https://github.com/Mr-Lucasz/automation-test/discussions)
 
 ## 🤝 Compromisso da Comunidade
 

@@ -10,9 +10,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 10
     reviewers:
-      - "lucas-egswf"
+      - "Mr-Lucasz"
     assignees:
-      - "lucas-egswf"
+      - "Mr-Lucasz"
     labels:
       - "dependencies"
       - "automated"
@@ -35,9 +35,9 @@ updates:
       time: "09:00"
     open-pull-requests-limit: 5
     reviewers:
-      - "lucas-egswf"
+      - "Mr-Lucasz"
     assignees:
-      - "lucas-egswf"
+      - "Mr-Lucasz"
     labels:
       - "dependencies"
       - "github-actions"

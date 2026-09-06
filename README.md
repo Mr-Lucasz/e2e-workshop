@@ -8,13 +8,13 @@
 [![Cucumber](https://img.shields.io/badge/Cucumber-20.0.2-brightgreen.svg)](https://cucumber.io/)
 [![Node.js](https://img.shields.io/badge/Node.js-18+-blue.svg)](https://nodejs.org/)
 [![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Course](https://img.shields.io/badge/Course-4%20Modules-orange.svg)](https://github.com/lucas-egswf/automation-test)
-[![CI/CD](https://github.com/lucas-egswf/automation-test/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/lucas-egswf/automation-test/actions)
-[![Test Coverage](https://img.shields.io/badge/coverage-95%25-green.svg)](https://github.com/lucas-egswf/automation-test)
-[![Last Commit](https://img.shields.io/github/last-commit/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
-[![Open Issues](https://img.shields.io/github/issues/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test/issues)
-[![GitHub Stars](https://img.shields.io/github/stars/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
-[![GitHub Forks](https://img.shields.io/github/forks/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test)
+[![Course](https://img.shields.io/badge/Course-4%20Modules-orange.svg)](https://github.com/Mr-Lucasz/automation-test)
+[![CI/CD](https://github.com/Mr-Lucasz/automation-test/workflows/CI%2FCD%20Pipeline/badge.svg)](https://github.com/Mr-Lucasz/automation-test/actions)
+[![Test Coverage](https://img.shields.io/badge/coverage-95%25-green.svg)](https://github.com/Mr-Lucasz/automation-test)
+[![Last Commit](https://img.shields.io/github/last-commit/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test)
+[![Open Issues](https://img.shields.io/github/issues/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test/issues)
+[![GitHub Stars](https://img.shields.io/github/stars/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test)
+[![GitHub Forks](https://img.shields.io/github/forks/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test)
 
 ---
 
@@ -68,7 +68,7 @@
 
 ```bash
 # Setup inicial (2 minutos)
-git clone https://github.com/lucas-egswf/automation-test.git
+git clone https://github.com/Mr-Lucasz/automation-test.git
 cd automation-test
 npm install
 
@@ -93,7 +93,7 @@ npm run format          # Formatar código
 ### **Setup Rápido (2 minutos)**
 ```bash
 # 1. Clone o curso
-git clone https://github.com/lucas-egswf/automation-test.git
+git clone https://github.com/Mr-Lucasz/automation-test.git
 cd automation-test
 
 # 2. Instale as dependências
@@ -385,7 +385,7 @@ Após completar todos os módulos, você receberá:
 
 ### **Setup em 2 minutos:**
 ```bash
-git clone https://github.com/lucas-egswf/automation-test.git
+git clone https://github.com/Mr-Lucasz/automation-test.git
 cd automation-test
 npm install
 npm run cypress:open
@@ -423,9 +423,9 @@ Execute o `Login.feature` e veja a mágica acontecer!
 ### **📞 Suporte e Comunidade**
 
 - **📖 [Documentação](LEARNING_GUIDE.md)** - Guia completo
-- **🐛 [Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reportar problemas
-- **💬 [Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Fórum da comunidade
-- **📧 [Email](mailto:lucas-egswf@github.com)** - Contato direto
+- **🐛 [Issues](https://github.com/Mr-Lucasz/automation-test/issues)** - Reportar problemas
+- **💬 [Discussions](https://github.com/Mr-Lucasz/automation-test/discussions)** - Fórum da comunidade
+- **📧 [Email](mailto:Mr-Lucasz@github.com)** - Contato direto
 
 ---
 
@@ -454,9 +454,9 @@ Execute o `Login.feature` e veja a mágica acontecer!
 ### **📞 Suporte e Comunidade**
 
 - **📖 [Documentação](LEARNING_GUIDE.md)** - Guia completo
-- **🐛 [Issues](https://github.com/lucas-egswf/automation-test/issues)** - Reportar problemas
-- **💬 [Discussions](https://github.com/lucas-egswf/automation-test/discussions)** - Fórum da comunidade
-- **📧 [Email](mailto:lucas-egswf@github.com)** - Contato direto
+- **🐛 [Issues](https://github.com/Mr-Lucasz/automation-test/issues)** - Reportar problemas
+- **💬 [Discussions](https://github.com/Mr-Lucasz/automation-test/discussions)** - Fórum da comunidade
+- **📧 [Email](mailto:Mr-Lucasz@github.com)** - Contato direto
 
 ---
 
@@ -464,9 +464,9 @@ Execute o `Login.feature` e veja a mágica acontecer!
 
 **⭐ Se este curso te ajudou, considere dar uma estrela! ⭐**
 
-[![GitHub stars](https://img.shields.io/github/stars/lucas-egswf/automation-test?style=social)](https://github.com/lucas-egswf/automation-test)
-[![GitHub forks](https://img.shields.io/github/forks/lucas-egswf/automation-test?style=social)](https://github.com/lucas-egswf/automation-test)
-[![GitHub issues](https://img.shields.io/github/issues/lucas-egswf/automation-test)](https://github.com/lucas-egswf/automation-test/issues)
+[![GitHub stars](https://img.shields.io/github/stars/Mr-Lucasz/automation-test?style=social)](https://github.com/Mr-Lucasz/automation-test)
+[![GitHub forks](https://img.shields.io/github/forks/Mr-Lucasz/automation-test?style=social)](https://github.com/Mr-Lucasz/automation-test)
+[![GitHub issues](https://img.shields.io/github/issues/Mr-Lucasz/automation-test)](https://github.com/Mr-Lucasz/automation-test/issues)
 
 **Transforme-se em um QA Automation Expert!**
 

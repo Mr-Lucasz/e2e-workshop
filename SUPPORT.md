@@ -134,9 +134,9 @@ console.log("Terminal log:", data);
 
 ### 🐙 **GitHub**
 
-- **Issues:** [Reporte bugs](https://github.com/lucas-egswf/automation-test/issues/new)
-- **Discussions:** [Participe das discussões](https://github.com/lucas-egswf/automation-test/discussions)
-- **Pull Requests:** [Contribua com código](https://github.com/lucas-egswf/automation-test/pulls)
+- **Issues:** [Reporte bugs](https://github.com/Mr-Lucasz/automation-test/issues/new)
+- **Discussions:** [Participe das discussões](https://github.com/Mr-Lucasz/automation-test/discussions)
+- **Pull Requests:** [Contribua com código](https://github.com/Mr-Lucasz/automation-test/pulls)
 
 ### 💬 **Comunidades Online**
 
@@ -147,7 +147,7 @@ console.log("Terminal log:", data);
 ### 📧 **Contato Direto**
 
 - **Email:** [INSERIR_EMAIL]
-- **LinkedIn:** [Perfil do Lucas](https://linkedin.com/in/lucas-egswf)
+- **LinkedIn:** [Perfil do Lucas](https://linkedin.com/in/Mr-Lucasz)
 - **Twitter:** [@lucas_egswf](https://twitter.com/lucas_egswf)
 
 ## 🌟 Comunidade

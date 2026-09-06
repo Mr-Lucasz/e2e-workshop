@@ -112,5 +112,5 @@ Obrigado por contribuir com este projeto! Sua contribuição faz a diferença pa
 
 ---
 
-**Revisores:** @lucas-egswf
+**Revisores:** @Mr-Lucasz
 **Deadline:** <!-- Se houver deadline específico -->
